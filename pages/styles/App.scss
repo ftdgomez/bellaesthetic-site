@@ -1,0 +1,74 @@
+/* The following block can be included in a custom.scss */
+
+/* make the customizations */
+$theme-colors: (
+    "primary": #CB957D,
+    "secondary": #C19551
+);
+
+$primary-color: #CB957D;
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
+
+
+.custom-header-container{
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  margin-top: 2em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2em;
+  img{
+    max-height: 75px;
+  }
+  @media (max-width: 1024px)
+  {
+    position: inherit;
+    padding: 1em;
+    background-color: $primary-color;
+    margin-top: 0;
+    align-items: center;
+  }
+}
+
+.custom-header{
+  flex: 1;
+  max-width: 1024px;
+  margin: auto;
+  background-color: $primary-color;
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: center;
+  a{
+    color: white;
+  }
+  @media (max-width: 1024px)
+  {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    min-height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+
+h1,h2,h3,h4,h5{
+  color: #48300A;
+}
+
+.container{
+ @media (min-width: 1200px) {
+   max-width: 1280px;
+ }
+}
