@@ -13,8 +13,8 @@ const Header = () => {
         <Link href="/treatments">Treatments</Link>
         <Link href="/special">Speacial</Link>
         <Link href="/book-now">Book Now</Link>        
+        <a href="https://instagram.com"><img className="ig-logo" src="/img/ig.png" alt=""/></a>
       </nav>
-      <a href="https://instagram.com"><img src="/img/ig.png" alt=""/></a>
     </header>
   )
 }

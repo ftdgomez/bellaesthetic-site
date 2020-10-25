@@ -11,6 +11,44 @@ $primary-color: #CB957D;
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";
 
+#mainbg{
+  width: 94.9%;
+  height: auto;
+  @media screen and (max-width: 1600px)
+  {
+    width: 100%;
+  }
+  @media screen and (max-width: 1440px)
+  {
+    width: 100%;
+    height: 90vh;
+  }
+  @media screen and (max-width: 1366px)
+  {
+    width: 87.6%;
+    height: 100vh;
+  }
+  mix-blend-mode: multiply;
+  @media screen and (max-width: 1024px)
+  {
+    display: none;
+  }
+}
+
+.video-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  @media screen and (max-width: 1024px)
+  {
+    display: none;
+  }
+
+}
 
 .custom-header-container{
   position: absolute;
@@ -25,6 +63,7 @@ $primary-color: #CB957D;
   padding: 0 2em;
   img{
     max-height: 75px;
+    display: block;
   }
   @media (max-width: 1024px)
   {
@@ -36,16 +75,64 @@ $primary-color: #CB957D;
   }
 }
 
+.carousel-control-prev,
+.carousel-control-next{
+  max-width: 38px;
+  background-color: $primary-color;
+}
+
+.row .d-flex .carousel.slide{
+  margin-top: auto !important;
+  margin-left: auto !important;
+  max-width: 580px;
+}
+
+.title-container{
+  max-width: 620px;
+  h2{
+    font-size: 48px;
+  }
+  @media (min-width: 1400px)
+  {
+    max-width: 780px;
+    h2{
+      font-size: 68px;
+    }
+    margin: auto;
+    margin-top: 25%;
+  }
+  margin-top: 5%;
+  @media (min-with: 1024px)
+  {
+    margin-top: 15%;
+  }
+}
+
+.carousel-indicators li{
+  background-color: $primary-color;
+}
+
+
+.card-carousel-item{
+  padding: 1.25em 66px;
+}
+
 .custom-header{
   flex: 1;
-  max-width: 1024px;
-  margin: auto;
+  max-width: 780px;
+  margin-left: auto;
   background-color: $primary-color;
-  padding: 1em 2em;
+  padding: .25em 2em;
   display: flex;
   align-items: center;
   justify-content: space-between;
   justify-self: center;
+  box-shadow: 4px 2px 8px rgba($color: black, $alpha: 0.1);
+  .ig-logo{
+    height: 34px;
+    width: 34px;
+    margin: .25em;
+  }
   a{
     color: white;
   }
@@ -62,9 +149,72 @@ $primary-color: #CB957D;
   }
 }
 
+.mp-img{
+  min-height: 320px;
+  width: 100%;
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+  transition: .4s ease;
+  align-items: flex-end;
+  @media (max-height: 1024px)
+  {
+    margin-bottom: 2em;
+  }
+  &:hover{
+    background-size: 105%;
+    cursor: pointer;
+  }
+  .mp-item{
+    background-color: $primary-color;
+    color: white;
+    font-size: 140%;
+    width: 80%;
+    padding: .25em 1em;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+}
+.mp-container{
+  min-height: 800px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 h1,h2,h3,h4,h5{
   color: #48300A;
+}
+
+.promocard{
+  margin-top: 5%;
+  background-color: white;
+  padding: 6em 2em;
+  background-position: center right;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  border: 2px solid #DBA147;
+  @media screen and (max-width: 1024px)
+  {
+    background-position: center center;
+    background-size: cover;
+  }
+  *{
+    color: #DBA147;
+  }
+  h2{
+    font-weight: bold;
+    max-width: 566px;
+    font-size: 360%;
+    background-color: white;
+  }
+  a{
+    background-color: #DBA147;
+    color: white;
+    padding: 1em 2em;
+    display: inline-block;
+  }
 }
 
 .container{
