@@ -118,7 +118,7 @@ export default function Home() {
           subtitle="Featured Product"
           title="$20 de descuento en tu primera visita"
           btnText="Agendar Cita"
-          link="/"
+          link="/#"
           picture="temp.jpg"
         />
       </Container>
