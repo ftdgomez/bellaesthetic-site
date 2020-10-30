@@ -9,7 +9,7 @@ const HeroSection = ({data}) => {
           minHeight: '100vh',
           width: '100%'
         }}></div>
-        <video autoplay loop muted id="mainbg">
+        <video autoPlay loop muted id="mainbg">
           <source src="/bg-bella.mp4" type="video/mp4" />
           Your browser does not support the video tag
         </video>
