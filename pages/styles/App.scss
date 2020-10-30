@@ -11,48 +11,34 @@ $primary-color: #CB957D;
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";
 
-#mainbg{
-  width: 94.9%;
-  height: auto;
-  @media screen and (max-width: 1600px)
-  {
-    width: 100%;
-  }
-  @media screen and (max-width: 1440px)
-  {
-    width: 100%;
-    height: 90vh;
-  }
-  @media screen and (max-width: 1366px)
-  {
-    width: 87.6%;
-    height: 100vh;
-  }
-  mix-blend-mode: multiply;
-  @media screen and (max-width: 1024px)
-  {
-    display: none;
-  }
+html{
+  overflow-x: hidden;
 }
 
-.video-container{
+#mainbg{
+  mix-blend-mode: multiply;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
+  height: auto;
   display: flex;
   justify-content: flex-start;
-  @media screen and (max-width: 1024px)
-  {
-    display: none;
-  }
+  z-index: 0;
 
+}
+
+.main-hero{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .custom-header-container{
   position: absolute;
-  z-index: 999;
+  z-index: 9999;
   top: 0;
   left: 0;
   margin-top: 2em;
@@ -65,13 +51,29 @@ $primary-color: #CB957D;
     max-height: 75px;
     display: block;
   }
+  .btn-menu{
+    color: white;
+    background: $primary-color;
+    padding: 1em;
+    border-radius: 100%;
+    border: 1px solid rgb(175, 170, 170);
+    transform: scale(.9);
+    transition: .4s ease;
+    display: none;
+    &:active{
+      transform: scale(1);
+    }
+  }
   @media (max-width: 1024px)
   {
-    position: inherit;
+    position: relative;
     padding: 1em;
-    background-color: $primary-color;
+    background-color: rgba($color: $primary-color, $alpha: .5);
     margin-top: 0;
     align-items: center;
+    .btn-menu{
+      display: block;
+    }
   }
 }
 
@@ -89,6 +91,7 @@ $primary-color: #CB957D;
 
 .title-container{
   max-width: 620px;
+  margin-top: 22.5%;
   h2{
     font-size: 48px;
   }
@@ -101,10 +104,14 @@ $primary-color: #CB957D;
     margin: auto;
     margin-top: 25%;
   }
-  margin-top: 5%;
   @media (min-with: 1024px)
   {
     margin-top: 15%;
+  }
+  @media (max-width: 1024px)
+  {
+    text-align: center;
+    padding-top: 15%;
   }
 }
 
@@ -136,6 +143,8 @@ $primary-color: #CB957D;
   a{
     color: white;
   }
+
+
   @media (max-width: 1024px)
   {
     position: fixed;
@@ -146,7 +155,12 @@ $primary-color: #CB957D;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    transition: .4s ease;
   }
+}
+
+.sidebarActive{
+  left: 0 !important;
 }
 
 .mp-img{
@@ -221,4 +235,11 @@ h1,h2,h3,h4,h5{
  @media (min-width: 1200px) {
    max-width: 1280px;
  }
+}
+
+.main-content{
+  position: relative;
+  z-index: 3;
+  background-color: white;
+  padding: 1em;
 }

@@ -11,23 +11,19 @@ export default function Home() {
         <title>Bella Esthetics | Weight Reduction, Skin Care, Laser Treatment, Spa Service In Fairfax VA </title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="keywords" content="facial treatment, weight reduction, skin care, aesthetics, esthetic clinic, acne treatment, anti-stress massage, massage, anti-ageing, vein removal, hair removal, laser treatment, wellness, healthy life, spa, salon, place, clinic, fairfax, virginia, area, annandale, alexandria"></meta>
+        <meta name="viewport" content="width=device-width, user-scalable=no"></meta>
       </Head>
       <Header />
-      {/* <MainSlider /> */}
-      {/* Main Section */}
       <div style={{
         backgroundImage: 'url(/bg.jpg)',
         minHeight: '100vh',
         width: '100%'
-      }}
-        className="video-container"
-      >
-        <video autoPlay loop muted id="mainbg">
-          <source src="/bg-bella.mp4" type="video/mp4" />
-          Your browser does not support the video tag
-        </video>
-      </div>
-      <div style={{ minHeight: '100vh', width: '100%'}}>
+      }}></div>
+      <video autoPlay loop muted id="mainbg">
+        <source src="/bg-bella.mp4" type="video/mp4" />
+        Your browser does not support the video tag
+      </video>
+      <div className="main-hero">
         <div className="container-fluid">
           <Row className="vh-100">
             <Col sm={12} md={5} className=""></Col>
@@ -73,6 +69,7 @@ export default function Home() {
           </Row>
         </div>
       </div>
+      <div className="main-content">
       <Container className="mp-container" style={{backgroundImage: 'url(/img/bg-cool-1.png)'}}>
         <h4 className="text-center my-4">Most Popular</h4>
         <Row>
@@ -122,6 +119,7 @@ export default function Home() {
           picture="temp.jpg"
         />
       </Container>
+      </div>
     </div>
   )
 }
