@@ -1,19 +1,26 @@
 import React, {useState} from 'react'
 import Link from 'next/link'
 
-const Header = () => {
+const Header = ({data}) => {
   const [sidebar, setSidebar] = useState(false)
 
   return (
     <header className="custom-header-container">
       <Link href="/"><img src="/img/logo.png" alt=""/></Link>  
       <nav className={`custom-header ${sidebar && 'sidebarActive'}`}>
-        <Link href="/">Home</Link>
-        <Link href="/about-us">About Us</Link>
-        <Link href="/treatments">Treatments</Link>
-        <Link href="/special">Speacial</Link>
-        <Link href="/book-now">Book Now</Link>
-        <a href="https://instagram.com">
+
+        {data.links.map((el, index) => (
+          <Link key={`header-link-${index}`} href={el.href + data.query}>{el.name}</Link>
+        ))}
+
+        <div className="dropdown">
+          <span className="dropdown-title">{location.search === '?lang=es' ? 'Español - ES' : 'English - EN'}</span>
+          <div className="dropdown-content">
+            <a href={location.pathname + '?lang=es'}>Español - ES</a>
+            <a href={location.pathname + '?lang=en'}>English - EN</a>
+          </div>
+        </div>
+        <a target="_blank" href="https://www.instagram.com/bella_esthetics/">
           <img className="ig-logo" src="/img/ig.png" alt=""/>
         </a>
       </nav>

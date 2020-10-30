@@ -1,125 +1,74 @@
 import Head from 'next/head'
-import Header from './components/Header'
+import {useState, useEffect} from 'react'
+import Header from '../components/Header'
 import { Container, Row, Col, Button, Card, Carousel } from 'react-bootstrap'
+import { HeaderData } from '../data/HeaderData'
+import Loader from '../components/Loader'
 import Link from 'next/link'
-import PromoCard from './components/PromoCard'
+
+import PromoCard from '../components/PromoCard'
+import { HomeData } from '../data/HomeData'
+import 'animate.css'
+import HeroSection from '../sections/HeroSection'
+import ServicesSection from '../sections/ServicesSection'
+import NuestroPaquetes from '../sections/NuestroPaquetes'
 
 export default function Home() {
-  return (
-    <div>
-      <Head>
-        <title>Bella Esthetics | Weight Reduction, Skin Care, Laser Treatment, Spa Service In Fairfax VA </title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="keywords" content="facial treatment, weight reduction, skin care, aesthetics, esthetic clinic, acne treatment, anti-stress massage, massage, anti-ageing, vein removal, hair removal, laser treatment, wellness, healthy life, spa, salon, place, clinic, fairfax, virginia, area, annandale, alexandria"></meta>
-        <meta name="viewport" content="width=device-width, user-scalable=no"></meta>
-      </Head>
-      <Header />
-      <div style={{
-        backgroundImage: 'url(/bg.jpg)',
-        minHeight: '100vh',
-        width: '100%'
-      }}></div>
-      <video autoPlay loop muted id="mainbg">
-        <source src="/bg-bella.mp4" type="video/mp4" />
-        Your browser does not support the video tag
-      </video>
-      <div className="main-hero">
-        <div className="container-fluid">
-          <Row className="vh-100">
-            <Col sm={12} md={5} className=""></Col>
-            <Col sm={12} md={7} className="d-flex flex-column" style={{minHeight: '100vh'}}>
-              <div className="title-container">
-                <h2 className="pt-md-4  font-weight-bold">
-                  Natural looking <br />
-                  results. A <br />
-                  Sensation Of Beauty
-                </h2>
-                <Button size="lg" className="mr-4 text-white">Conoce Nuestros Servicios</Button>
-                <Button size="lg" variant="secondary" className="text-white">Agenda Una Cita Ya</Button>
-              </div>
-              <div style={{marginLeft: 'auto', marginTop: 'auto'}}>
-              <Carousel>
+  const [data, setData] = useState(null)
+  const [headerData, setHeaderData] = useState(null)
 
-                <Carousel.Item>
-                  <Card.Body className="card-carousel-item bg-white rounded">
-                      <Card.Title className="font-weight-bold mt-2">Card Title</Card.Title>
-                      <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                      </Card.Text>
-                      <Button variant="primary">Go somewhere</Button>  
-                  </Card.Body>
-                </Carousel.Item>
+  useEffect(() => {
+    if (!data)
+    {
+      setData(HomeData(location.search.split('=')[1]))
+    }
+    if (!headerData)
+    {
+      setHeaderData(HeaderData(location.search.split('=')[1]))
+    }
+  },[data, headerData])
 
-                 <Carousel.Item>
-                  <Card.Body className="card-carousel-item bg-white rounded">
-                      <Card.Title className="font-weight-bold mt-2">Card Title</Card.Title>
-                      <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                      </Card.Text>
-                      <Button variant="primary">Go somewhere</Button>  
-                  </Card.Body>
-                </Carousel.Item>
+  if (!data || !headerData)
+  {
+    return <Loader />
+  }
+  else
+  {
+    return (
+      <div className="animate__animated animate__fadeIn">
+        <Head>
+          <title>Bella Esthetics | Weight Reduction, Skin Care, Laser Treatment, Spa Service In Fairfax VA </title>
+          <link rel="icon" href="/favicon.ico" />
+          <meta name="keywords" content="facial treatment, weight reduction, skin care, aesthetics, esthetic clinic, acne treatment, anti-stress massage, massage, anti-ageing, vein removal, hair removal, laser treatment, wellness, healthy life, spa, salon, place, clinic, fairfax, virginia, area, annandale, alexandria"></meta>
+          <meta name="viewport" content="width=device-width, user-scalable=no"></meta>
+        </Head>
+        <Header data={headerData} />
 
-              </Carousel>
- 
-              </div>
-          </Col>
-          </Row>
+        <HeroSection data={data} />
+        <div className="main-content">
+          <Container className="mp-container" style={{backgroundImage: 'url(/img/bg-cool-1.png)'}}>
+            <ServicesSection data={data} />
+            <PromoCard
+              subtitle="Featured Product"
+              title="$20 de descuento en tu primera visita"
+              btnText="Agendar Cita"
+              link="/#"
+              picture="temp.jpg"
+            />
+          </Container>
+          <NuestroPaquetes data={data} />
+          <Container>
+            <PromoCard
+              subtitle="Featured Product"
+              title="$20 de descuento en tu primera visita"
+              btnText="Agendar Cita"
+              link="/#"
+              picture="temp.jpg"
+              side="left"
+              />
+            </Container>
         </div>
       </div>
-      <div className="main-content">
-      <Container className="mp-container" style={{backgroundImage: 'url(/img/bg-cool-1.png)'}}>
-        <h4 className="text-center my-4">Most Popular</h4>
-        <Row>
-          <Col sm={12} md={4}>
-            <Link href="/">
-              <div className="mp-img"
-              style={{
-              backgroundImage: 'url(/img/hidrofacials.jpg)',
-              }}>
-                <div className="mp-item">
-                   Hidrofacials
-                </div>
-              </div>
-           </Link>
-          </Col>
-          <Col sm={12} md={4}>
-            <Link href="/">
-              <div className="mp-img"
-              style={{
-              backgroundImage: 'url(/img/linfa.jpg)',
-              }}>
-                <div className="mp-item">
-                   Hidrofacials
-                </div>
-              </div>
-           </Link>
-          </Col>
-           <Col sm={12} md={4}>
-            <Link href="/">
-              <div className="mp-img"
-              style={{
-              backgroundImage: 'url(/img/ipl.jpg)',
-              }}>
-                <div className="mp-item">
-                   Hidrofacials
-                </div>
-              </div>
-           </Link>
-          </Col>
- 
-        </Row>
-        <PromoCard
-          subtitle="Featured Product"
-          title="$20 de descuento en tu primera visita"
-          btnText="Agendar Cita"
-          link="/#"
-          picture="temp.jpg"
-        />
-      </Container>
-      </div>
-    </div>
-  )
+    )
+  }
 }
