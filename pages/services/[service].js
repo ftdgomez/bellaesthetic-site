@@ -40,8 +40,6 @@ export const getStaticProps = async ({ params: { service } }) => {
   let filepath;
 
   filepath = execSync(`find ./treatments -name '${service}.md'`).toString().replace("\n", "")
-//  console.log(">>>>>", filepath, "<<<<<")
-//  const mdMetadata = fs.readFileSync(path.join("treatments/body/", service + '.md' )).toString()
   const mdMetadata = fs.readFileSync(filepath).toString()
 
   const parsedMd = matter(mdMetadata)

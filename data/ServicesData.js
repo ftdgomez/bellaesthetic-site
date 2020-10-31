@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-const getPaths = async () => {
+const getPaths = () => {
   const bodyfiles = fs.readdirSync('treatments/body')
   const facefiles = fs.readdirSync('treatments/facial')
   const bodypaths = bodyfiles.map(filename => (filename.replace(".md", "")));
@@ -26,8 +26,8 @@ export const ServicesData = (lang) => {
   }
 }
 
-const SERVICE_EN = async () =>{
-  const datapaths = await getPaths()
+const SERVICE_EN = () =>{
+  const datapaths = getPaths()
   const facepaths = datapaths.facepaths.map(item => ({
     title: item,
     picture: `/img/${item}.jpg`,
