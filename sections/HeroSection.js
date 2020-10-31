@@ -20,7 +20,7 @@ const HeroSection = ({data}) => {
               <Col sm={12} md={7} className="d-flex flex-column" style={{minHeight: '100vh'}}>
                 <div className="title-container">
                   <h2 className="pt-md-4  font-weight-bold">
-      {data.heroSection.mainTitle.split(' ').map((el, index) => (<span key={`hero-title-item-${index}`}>{el}{' '}{index === 1 && <br />}</span>))}
+                  {data.heroSection.mainTitle.split(' ').map((el, index) => (<span key={`hero-title-item-${index}`}>{el}{' '}{index === 1 && <br />}</span>))}
                   </h2>
                   <a href="/" size="lg" className="btn btn-primary mr-md-4 text-white">
                     {data.heroSection.btn1.text}
@@ -45,7 +45,6 @@ const HeroSection = ({data}) => {
                     </Carousel.Item>
                   ))
                 }
-
                 </Carousel>
    
                 </div>

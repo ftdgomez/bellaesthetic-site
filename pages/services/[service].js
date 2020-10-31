@@ -1,8 +1,12 @@
 import React from 'react'
-import fs from 'fs'
-import matter from 'gray-matter'
-import path from 'path'
 import Head from 'next/head'
+import ReactMarkdown from 'react-markdown'
+import { Container } from 'react-bootstrap'
+import { ServicesData } from '../../data/ServicesData'
+import matter from 'gray-matter'
+import fs from 'fs'
+import path from 'path'
+import { execSync } from 'child_process'
 
 const Treatment = ({service, contents, data}) => {
   return (
@@ -11,27 +15,34 @@ const Treatment = ({service, contents, data}) => {
         <title>{data.title}</title>
       </Head>
       <h4>{service}</h4>
-      <div>{contents}</div>
+      <Container>
+        <ReactMarkdown>{contents}</ReactMarkdown>
+      </Container>
     </div>)
 }
 
 export const getStaticPaths = async () => {
-  const files = fs.readdirSync('treatments')
-  console.log("files:", files)
-  const paths = files.map(filename => ({
+  const sdata = await ServicesData()
+  const sdatat = [...sdata.paths.bodypaths, ...sdata.paths.facepaths]
+  const paths = sdatat.map(path => ({
     params: {
-      service: filename.replace(".md", "")
+      service: path
     }
-  }));
-  console.log("paths: ", paths)
+  }))
   return {
     paths,
     fallback: false
   }
 }
 
-export const getStaticProps = async ({ params: { service }}) => {
-  const mdMetadata = fs.readFileSync(path.join("treatments", service + ".md")).toString()
+export const getStaticProps = async ({ params: { service } }) => {
+
+  let filepath;
+
+  filepath = execSync(`find ./treatments -name '${service}.md'`).toString().replace("\n", "")
+//  console.log(">>>>>", filepath, "<<<<<")
+//  const mdMetadata = fs.readFileSync(path.join("treatments/body/", service + '.md' )).toString()
+  const mdMetadata = fs.readFileSync(filepath).toString()
 
   const parsedMd = matter(mdMetadata)
 
@@ -42,6 +53,7 @@ export const getStaticProps = async ({ params: { service }}) => {
       data: parsedMd.data
     }
   }
+
 }
 
 export default Treatment

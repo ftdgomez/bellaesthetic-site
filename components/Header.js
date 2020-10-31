@@ -14,10 +14,10 @@ const Header = ({data}) => {
         ))}
 
         <div className="dropdown">
-          <span className="dropdown-title">{location.search === '?lang=es' ? 'Español - ES' : 'English - EN'}</span>
+          <span className="dropdown-title">{data.query === '?lang=es' ? 'Español - ES' : 'English - EN'}</span>
           <div className="dropdown-content">
-            <a href={location.pathname + '?lang=es'}>Español - ES</a>
-            <a href={location.pathname + '?lang=en'}>English - EN</a>
+            <a  href={'?lang=es'}>Español - ES</a>
+            <a href={'?lang=en'} >English - EN</a>
           </div>
         </div>
         <a target="_blank" href="https://www.instagram.com/bella_esthetics/">

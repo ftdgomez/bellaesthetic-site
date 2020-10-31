@@ -1,11 +1,12 @@
 ---
 title: ESTHETIC CAVITATION
-description: "To date, *cavitation* is the most revolutionary method of dealing with excess body fat. Millions of people throughout the civilized world are choosing this method of modern medicine. This success is due to stunning results – you’ll see the effect after the first procedure."
+description: "To date, cavitation is the most revolutionary method of dealing with excess body fat. Millions of people throughout the civilized world are choosing this method of modern medicine. This success is due to stunning results – you’ll see the effect after the first procedure."
+thumbnail: 'default.jpg'
 ---
 
 # ESTHETIC CAVITATION:
 
-To date, *cavitation* is the most revolutionary method of dealing with excess body fat. Millions of people throughout the civilized world are choosing this method of modern medicine. This success is due to stunning results – you’ll see the effect after the first procedure.
+To date, **cavitation** is the most revolutionary method of dealing with excess body fat. Millions of people throughout the civilized world are choosing this method of modern medicine. This success is due to stunning results – you’ll see the effect after the first procedure.
 
 Every person always wants to stay in shape. Someone is actively involved in sports, someone exhausts himself with endless diets, eating packets of drugs and non-drugs or drugs for weight loss supplements that promise to help in weight loss and figure correction. Gradually many tools appeared for losing weight and people increasingly turn to professional services of modern beauty salons. And then appeared absolutely painless and effective method to get results comparable with surgical removal of fatty deposits and cellulite.
 

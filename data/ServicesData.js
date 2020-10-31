@@ -1,3 +1,16 @@
+import fs from 'fs'
+
+const getPaths = async () => {
+  const bodyfiles = fs.readdirSync('treatments/body')
+  const facefiles = fs.readdirSync('treatments/facial')
+  const bodypaths = bodyfiles.map(filename => (filename.replace(".md", "")));
+  const facepaths = facefiles.map(filename => (filename.replace(".md", "")));
+  return {
+    bodypaths,
+    facepaths
+  };
+}
+
 export const ServicesData = (lang) => {
   if (lang === 'es')
   {
@@ -13,7 +26,18 @@ export const ServicesData = (lang) => {
   }
 }
 
-const SERVICE_EN = () =>{
+const SERVICE_EN = async () =>{
+  const datapaths = await getPaths()
+  const facepaths = datapaths.facepaths.map(item => ({
+    title: item,
+    picture: `/img/${item}.jpg`,
+    url: `${item}`
+  }))
+  const bodypaths = datapaths.bodypaths.map(item => ({
+    title: item,
+    picture: `/img/${item}.jpg`,
+    url: `${item}`
+  }))
   return {
     query: null,
     title: 'Our Services',
@@ -25,79 +49,13 @@ const SERVICE_EN = () =>{
     ],
     bodyT: {
       title: 'Body treatments',
-      items: [
-        {
-          title: 'ESTHETIC CAVITATION',
-          picture: 'default.jpg',
-          url: '/esthetic-cavitation'
-        },
-        {
-          title: 'VIBRATION PLATFORM',
-          picture: 'default.jpg',
-          url: '/vibration-platform'
-        },
-        {
-          title: 'RADIO FREQUENCY',
-          picture: 'default.jpg',
-          url: '/body-radiofrequency'
-        },
-        {
-          title: 'REDUCTIVE MASSAGE',
-          picture: 'default.jpg',
-          url: '/reductive-massage'
-        },
-        {
-          title: 'Lymphatic Drainage Massage',
-          picture: 'default.jpg',
-          url: '/lymphatic-drainage-massage'
-        },
-        {
-          title: 'Lipo Laser',
-          picture: 'default.jpg',
-          url: '/lipo-laser'
-        },
-      ]
+      items: bodypaths
     },
     faceT: {
       title: 'Facial treatments',
-      items: [
-        {
-          title: 'ANTI-AGING FACIAL',
-          picture: 'default.jpg',
-          url: '/anti-anging-facial'
-        },
-        {
-          title: 'ANTI-ACNE FACIAL',
-          picture: 'default.jpg',
-          url: '/anti-acne-facial'
-        },
-        {
-          title: 'MEN’S SKIN CARE',
-          picture: 'default.jpg',
-          url: '/men-skin-care'
-        },
-        {
-          title: 'HYDRAFACIAL',
-          picture: 'default.jpg',
-          url: '/hydrafacial'
-        },
-        {
-          title: 'PEELING',
-          picture: 'default.jpg',
-          url: '/peeling'
-        },
-        {
-          title: 'DERMAPEN',
-          picture: 'default.jpg',
-          url: '/dermapen'
-        },
-        {
-          title: 'Radiofrequency',
-          picture: 'default.jpg',
-          url: '/facial-radio-frequency'
-        },
-      ]
-    }
+      items: facepaths
+    },
+    paths: datapaths
   }
 }
 

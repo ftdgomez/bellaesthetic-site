@@ -4,30 +4,10 @@ import Header from '../../components/Header'
 import { Container, Row, Col  } from 'react-bootstrap'
 import { HeaderData } from '../../data/HeaderData'
 import { ServicesData } from '../../data/ServicesData'
-import Loader from '../../components/Loader'
 import Link from 'next/link'
 
-const services = () => {
-  const [data, setData] = useState(null)
-  const [headerData, setHeaderData] = useState(null)
+const services = ({headerData, data}) => {
 
-  useEffect(() => {
-    if (!data)
-    {
-      setData(ServicesData(location.search.split('=')[1]))
-    }
-    if (!headerData)
-    {
-      setHeaderData(HeaderData(location.search.split('=')[1]))
-    }
-  },[data, headerData])
-
-  if (!data || !headerData)
-  {
-    return <Loader />
-  }
-  else
-  {
     return (
       <>
         <Head>
@@ -50,7 +30,7 @@ const services = () => {
                   <Col
                    key={`body-t-${index}`} sm={12} md={4}>
                      <Link 
-                     href={`/services${el.url}/${data.query ? data.query : ''}`}>
+                     href={`/services/${el.url}/${data.query ? data.query : ''}`}>
                        <a
                         style={{backgroundImage: `url(${el.picture})`}}
                         className="body-t-item">
@@ -70,7 +50,7 @@ const services = () => {
                   <Col
                    key={`body-t-${index}`} sm={12} md={4}>
                      <Link
-                       href={`/services${el.url}/${data.query ? data.query : ''}`}>
+                       href={`/services/${el.url}/${data.query ? data.query : ''}`}>
                       <a 
                       style={{backgroundImage: `url(${el.picture})`}}
                       className="body-t-item">
@@ -86,6 +66,27 @@ const services = () => {
       </>
     )
   }
-}
 
+
+export async function getServerSideProps({ query }) {
+  const headerData = HeaderData(query.lang)
+  const data = await ServicesData(query.lang)
+  return {
+    props: {
+      headerData,
+      data
+    },
+  }
+}
+/* 
+export const getStaticProps = async ({ params: service }) => {
+  // const headerData = HeaderData(location.search.split('=')[1])
+  console.log(service)
+  return {
+    props: {
+      // headerData
+    }
+  }
+}
+ */
 export default services
