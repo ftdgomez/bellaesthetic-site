@@ -1,7 +1,7 @@
-import Head from 'next/head'
 import {useState, useEffect} from 'react'
+import Head from 'next/head'
 import Header from '../../components/Header'
-import { Container, Row, Col, Button, Card, Carousel } from 'react-bootstrap'
+import { Container, Row, Col  } from 'react-bootstrap'
 import { HeaderData } from '../../data/HeaderData'
 import { ServicesData } from '../../data/ServicesData'
 import Loader from '../../components/Loader'
@@ -49,12 +49,14 @@ const services = () => {
                 data.bodyT.items.map((el, index) => (
                   <Col
                    key={`body-t-${index}`} sm={12} md={4}>
-                     <a 
-                     href={el.url + data.query ? data.query : ''}
-                     style={{backgroundImage: `url(${el.picture})`}}
-                     className="body-t-item">
+                     <Link 
+                     href={`/services${el.url}/${data.query ? data.query : ''}`}>
+                       <a
+                        style={{backgroundImage: `url(${el.picture})`}}
+                        className="body-t-item">
                         <h4>{el.title}</h4>
-                     </a>
+                       </a>
+                     </Link>
                   </Col>
                 ))
               }
@@ -67,12 +69,14 @@ const services = () => {
                 data.faceT.items.map((el, index) => (
                   <Col
                    key={`body-t-${index}`} sm={12} md={4}>
-                     <a 
-                     href={el.url + data.query ? data.query : ''}
-                     style={{backgroundImage: `url(${el.picture})`}}
-                     className="body-t-item">
-                        <h4>{el.title}</h4>
-                     </a>
+                     <Link
+                       href={`/services${el.url}/${data.query ? data.query : ''}`}>
+                      <a 
+                      style={{backgroundImage: `url(${el.picture})`}}
+                      className="body-t-item">
+                          <h4>{el.title}</h4>
+                      </a>
+                     </Link>
                   </Col>
                 ))
               }

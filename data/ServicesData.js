@@ -1,19 +1,19 @@
 export const ServicesData = (lang) => {
   if (lang === 'es')
   {
-    return HOME_ES()
+    return SERVICE_ES()
   }
   else if (lang === 'en')
   {
-    return HOME_EN();
+    return SERVICE_EN();
   }
   else
   {
-    return HOME_EN();
+    return SERVICE_EN();
   }
 }
 
-const HOME_EN = () =>{
+const SERVICE_EN = () =>{
   return {
     query: null,
     title: 'Our Services',
@@ -101,7 +101,7 @@ const HOME_EN = () =>{
   }
 }
 
-const HOME_ES = () =>{
+const SERVICE_ES = () =>{
   return {
     query: '?lang=es',
     title: 'Nuestros Servicios',
