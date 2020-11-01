@@ -2,8 +2,8 @@ import fs from 'fs'
 import path from 'path'
 
 const getPaths = (lang) => {
-  const bodyfiles = fs.readdirSync(path.resolve(process.cwd(), `treatments/${lang}/body`))
-  const facefiles = fs.readdirSync(path.resolve(process.cwd(), `treatments/${lang}/facial`))
+  const bodyfiles = fs.readdirSync(path.resolve('./treatments', `${lang}/body`))
+  const facefiles = fs.readdirSync(path.resolve('./treatments', `${lang}/facial`))
   const bodypaths = bodyfiles.map(filename => (filename.replace(".md", "")));
   const facepaths = facefiles.map(filename => (filename.replace(".md", "")));
   return {
