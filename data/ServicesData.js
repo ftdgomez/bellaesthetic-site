@@ -1,8 +1,9 @@
 import fs from 'fs'
+import path from 'path'
 
-const getPaths = () => {
-  const bodyfiles = fs.readdirSync('treatments/body')
-  const facefiles = fs.readdirSync('treatments/facial')
+const getPaths = (lang) => {
+  const bodyfiles = fs.readdirSync(path.join(process.cwd(), `treatments/${lang}/body`))
+  const facefiles = fs.readdirSync(path.join(process.cwd(), `treatments/${lang}/facial`))
   const bodypaths = bodyfiles.map(filename => (filename.replace(".md", "")));
   const facepaths = facefiles.map(filename => (filename.replace(".md", "")));
   return {
@@ -27,7 +28,7 @@ export const ServicesData = (lang) => {
 }
 
 const SERVICE_EN = () =>{
-  const datapaths = getPaths()
+  const datapaths = getPaths('EN')
   const facepaths = datapaths.facepaths.map(item => ({
     title: item,
     picture: `/img/${item}.jpg`,
@@ -60,6 +61,17 @@ const SERVICE_EN = () =>{
 }
 
 const SERVICE_ES = () =>{
+  const datapaths = getPaths('ES')
+  const facepaths = datapaths.facepaths.map(item => ({
+    title: item,
+    picture: `/img/${item}.jpg`,
+    url: `${item}`
+  }))
+  const bodypaths = datapaths.bodypaths.map(item => ({
+    title: item,
+    picture: `/img/${item}.jpg`,
+    url: `${item}`
+  }))
   return {
     query: '?lang=es',
     title: 'Nuestros Servicios',
@@ -71,78 +83,12 @@ const SERVICE_ES = () =>{
     ],
     bodyT: {
       title: 'Tratamientos Corporales',
-      items: [
-        {
-          title: 'Cavitación Estética',
-          picture: 'default.jpg',
-          url: '/esthetic-cavitation'
-        },
-        {
-          title: 'Plataforma Vibratoria',
-          picture: 'default.jpg',
-          url: '/vibration-platform'
-        },
-        {
-          title: 'RADIO Frecuencia',
-          picture: 'default.jpg',
-          url: '/radio-frequency'
-        },
-        {
-          title: 'Masaje reductivo',
-          picture: 'default.jpg',
-          url: '/reductive-massage'
-        },
-        {
-          title: 'Masaje de Drenaje Linfático',
-          picture: 'default.jpg',
-          url: '/lymphatic-drainage-massage'
-        },
-        {
-          title: 'Lipo Laser',
-          picture: 'default.jpg',
-          url: '/lipo-laser'
-        },
-      ]
+      items: bodypaths
     },
     faceT: {
       title: 'Tratamientos Faciales',
-      items: [
-        {
-          title: 'ANTI-AGING FACIAL',
-          picture: 'default.jpg',
-          url: '/anti-anging-facial'
-        },
-        {
-          title: 'ANTI-ACNE FACIAL',
-          picture: 'default.jpg',
-          url: '/anti-acne-facial'
-        },
-        {
-          title: 'MEN’S SKIN CARE',
-          picture: 'default.jpg',
-          url: '/men-skin-care'
-        },
-        {
-          title: 'HYDRAFACIAL',
-          picture: 'default.jpg',
-          url: '/hydrafacial'
-        },
-        {
-          title: 'PEELING',
-          picture: 'default.jpg',
-          url: '/peeling'
-        },
-        {
-          title: 'DERMAPEN',
-          picture: 'default.jpg',
-          url: '/dermapen'
-        },
-        {
-          title: 'Radiofrequency',
-          picture: 'default.jpg',
-          url: '/facial-radio-frequency'
-        },
-      ]
-    }
+      items: facepaths
+    },
+    paths: datapaths
   }
 }
