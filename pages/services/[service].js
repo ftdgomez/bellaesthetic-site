@@ -39,7 +39,8 @@ export const getStaticProps = async ({ params: { service } }) => {
 
   let filepath;
 
-  filepath = execSync(`find ./public/treatments -name '${service}.md'`).toString().split('\n')[0].toString()
+  filepath = execSync(`find ./treatments -name '${service}.md'`)
+  .toString().split('\n')[0].toString()
 
   const mdMetadata = fs.readFileSync(filepath).toString()
 

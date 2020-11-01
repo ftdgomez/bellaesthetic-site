@@ -1,9 +1,15 @@
 import fs from 'fs'
 import path from 'path'
+import { execSync } from 'child_process'
 
 const getPaths = (lang) => {
-  const bodyfiles = fs.readdirSync(path.resolve('./public', `treatments/${lang}/body`))
-  const facefiles = fs.readdirSync(path.resolve('./public', `treatments/${lang}/facial`))
+  let filepath;
+
+  filepath = execSync(`find . -name 'treatments'`)
+  .toString().split('\n')[0].toString()
+
+  const bodyfiles = fs.readdirSync(`${filepath}/${lang}/body`)
+  const facefiles = fs.readdirSync(`${filepath}/${lang}/facial`)
   const bodypaths = bodyfiles.map(filename => (filename.replace(".md", "")));
   const facepaths = facefiles.map(filename => (filename.replace(".md", "")));
   return {
