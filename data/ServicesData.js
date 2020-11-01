@@ -1,23 +1,3 @@
-import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-
-const getPaths = (lang) => {
-  let filepath;
-
-  filepath = execSync(`find . -name 'treatments'`)
-  .toString().split('\n')[0].toString()
-
-  const bodyfiles = fs.readdirSync(`${filepath}/${lang}/body`)
-  const facefiles = fs.readdirSync(`${filepath}/${lang}/facial`)
-  const bodypaths = bodyfiles.map(filename => (filename.replace(".md", "")));
-  const facepaths = facefiles.map(filename => (filename.replace(".md", "")));
-  return {
-    bodypaths,
-    facepaths
-  };
-}
-
 export const ServicesData = (lang) => {
   if (lang === 'es')
   {
@@ -34,17 +14,6 @@ export const ServicesData = (lang) => {
 }
 
 const SERVICE_EN = () =>{
-  const datapaths = getPaths('EN')
-  const facepaths = datapaths.facepaths.map(item => ({
-    title: item,
-    picture: `/img/${item}.jpg`,
-    url: `${item}`
-  }))
-  const bodypaths = datapaths.bodypaths.map(item => ({
-    title: item,
-    picture: `/img/${item}.jpg`,
-    url: `${item}`
-  }))
   return {
     query: null,
     title: 'Our Services',
@@ -54,30 +23,12 @@ const SERVICE_EN = () =>{
       'Wellness has been all of our lives passions and our lives work.',
       'We specialize in Weight Loss, Wellness, Acne Treatments, Anti-Aging Treatments, Laser Hair Removal, Varicose Veins Removal, Relaxation Massage and more.'
     ],
-    bodyT: {
-      title: 'Body treatments',
-      items: bodypaths
-    },
-    faceT: {
-      title: 'Facial treatments',
-      items: facepaths
-    },
-    paths: datapaths
+    bodyTtitle: 'Body Treatments',
+    faceTtitle: 'Facial Treatments'
   }
 }
 
 const SERVICE_ES = () =>{
-  const datapaths = getPaths('ES')
-  const facepaths = datapaths.facepaths.map(item => ({
-    title: item,
-    picture: `/img/${item}.jpg`,
-    url: `${item}`
-  }))
-  const bodypaths = datapaths.bodypaths.map(item => ({
-    title: item,
-    picture: `/img/${item}.jpg`,
-    url: `${item}`
-  }))
   return {
     query: '?lang=es',
     title: 'Nuestros Servicios',
@@ -87,14 +38,7 @@ const SERVICE_ES = () =>{
       'Wellness has been all of our lives passions and our lives work.',
       'We specialize in Weight Loss, Wellness, Acne Treatments, Anti-Aging Treatments, Laser Hair Removal, Varicose Veins Removal, Relaxation Massage and more.'
     ],
-    bodyT: {
-      title: 'Tratamientos Corporales',
-      items: bodypaths
-    },
-    faceT: {
-      title: 'Tratamientos Faciales',
-      items: facepaths
-    },
-    paths: datapaths
+    bodyTtitle: 'Tratamientos Corporales',
+    faceTtitle: 'Tratamientos Faciales'
   }
 }

@@ -22,13 +22,25 @@ const Treatment = ({service, contents, data}) => {
 }
 
 export const getStaticPaths = async () => {
-  const sdata = await ServicesData()
-  const sdatat = [...sdata.paths.bodypaths, ...sdata.paths.facepaths]
-  const paths = sdatat.map(path => ({
+
+  const esbodyfiles = fs.readdirSync(path.join(process.cwd(),`treatments/ES/body`))
+  const esfacefiles = fs.readdirSync(path.join(process.cwd(),`treatments/ES/facial`))
+  const esbodypaths = esbodyfiles.map(filename => (filename.replace(".md", "")));
+  const esfacepaths = esfacefiles.map(filename => (filename.replace(".md", "")));
+
+  const enbodyfiles = fs.readdirSync(path.join(process.cwd(),`treatments/EN/body`))
+  const enfacefiles = fs.readdirSync(path.join(process.cwd(),`treatments/EN/facial`))
+  const enbodypaths = enbodyfiles.map(filename => (filename.replace(".md", "")));
+  const enfacepaths = enfacefiles.map(filename => (filename.replace(".md", "")));
+
+  const allpaths = [...esbodypaths, ...esfacepaths, ...enbodypaths, ...enfacepaths]
+  console.log(allpaths)
+  const paths = allpaths.map(path => ({
     params: {
       service: path
     }
   }))
+  
   return {
     paths,
     fallback: false
@@ -39,8 +51,7 @@ export const getStaticProps = async ({ params: { service } }) => {
 
   let filepath;
 
-  filepath = execSync(`find ./treatments -name '${service}.md'`)
-  .toString().split('\n')[0].toString()
+  filepath = execSync(`find ./treatments -name '${service}.md'`).toString().split('\n')[0].toString()
 
   const mdMetadata = fs.readFileSync(filepath).toString()
 
