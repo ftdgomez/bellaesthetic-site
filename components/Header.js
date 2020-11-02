@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Link from 'next/link'
+import MakeAppointmentBtn from './MakeAppointmentBtn'
 
 const Header = ({data}) => {
   const [sidebar, setSidebar] = useState(false)
@@ -27,6 +28,7 @@ const Header = ({data}) => {
             </div>
           }
         </div>
+        <MakeAppointmentBtn />
         <a target="_blank" href="https://www.instagram.com/bella_esthetics/">
           <img className="ig-logo" src="/img/ig.png" alt=""/>
         </a>

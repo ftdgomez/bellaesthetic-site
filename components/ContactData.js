@@ -1,5 +1,6 @@
 import React from 'react'
-import { ListGroup } from 'react-bootstrap'
+import { ListGroup, Button } from 'react-bootstrap'
+import MakeAppointmentBtn from './MakeAppointmentBtn'
 
 const ContactData = () => {
   return (
@@ -13,6 +14,11 @@ const ContactData = () => {
       <ListGroup.Item>
         <i className="im im-location mr-2"></i>  10560 Main St, Ste 102, Fairfax 22030.
       </ListGroup.Item>
+      <ListGroup.Item>
+        <i className="im im-mail mr-4"></i><a href="mailto:info@labellaesthetics.com">info@labellaesthetics.com</a>
+      </ListGroup.Item>
+      <MakeAppointmentBtn />
+      <iframe className="mt-4" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FBella-Esthetic-by-Gabriela-Ruiz-182627661817675&width=186&layout=button&action=like&size=large&share=true&height=65&appId=759703458182138" width="186" height="65" style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameBorder="0"  allow="encrypted-media"></iframe>
     </ListGroup>
   )
 }

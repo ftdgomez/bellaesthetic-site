@@ -17,7 +17,6 @@ const Treatment = ({service, contents, data}) => {
       <Container className="my-4">
         <Row>
           <Col sm={12} md={4} className="p-4 border rounded">
-            <Button block size="lg" className="text-white">Make an appointment</Button>
             <h4 className="mt-4">Contact Us</h4>
             <ContactData />
             <VideoPlayer url={data.videourl} />

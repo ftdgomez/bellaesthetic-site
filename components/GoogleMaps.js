@@ -4,7 +4,7 @@ const GoogleMaps = () => {
   return (
 <iframe 
 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54454767.03218853!2d-77.86452822541192!3d33.58830024321896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64eecc7ec4369%3A0x73885b28ded0b8c3!2s10560%20Main%20St%2C%20Fairfax%2C%20VA%2022031%2C%20USA!5e0!3m2!1sen!2ses!4v1604278704712!5m2!1sen!2ses"
-width="100%" height="230" frameBorder="0" style={{border: 0}} allowFullScreen=""
+width="100%" height="100%" frameBorder="0" style={{border: 0}} allowFullScreen=""
 aria-hidden="false" tabIndex="0"></iframe>
   )
 }
