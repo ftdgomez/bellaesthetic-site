@@ -1,49 +1,35 @@
-import Head from 'next/head'
-import {useState, useEffect} from 'react'
-import Header from '../components/Header'
-import { Container, Row, Col, Button, Card, Carousel } from 'react-bootstrap'
-import { HeaderData } from '../data/HeaderData'
-import Loader from '../components/Loader'
+import { useState, useEffect } from 'react'
+import { Container } from 'react-bootstrap'
 import Link from 'next/link'
 
-import PromoCard from '../components/PromoCard'
 import { HomeData } from '../data/HomeData'
+import PromoCard from '../components/PromoCard'
 import 'animate.css'
 import HeroSection from '../sections/HeroSection'
 import ServicesSection from '../sections/ServicesSection'
 import NuestroPaquetes from '../sections/NuestroPaquetes'
+import MainLayout from '../layout/MainLayout'
+import Loader from '../components/Loader'
 
 export default function Home() {
   const [data, setData] = useState(null)
-  const [headerData, setHeaderData] = useState(null)
 
   useEffect(() => {
     if (!data)
     {
       setData(HomeData(location.search.split('=')[1]))
     }
-    if (!headerData)
-    {
-      setHeaderData(HeaderData(location.search.split('=')[1]))
-    }
-  },[data, headerData])
+  },[data])
 
-  if (!data || !headerData)
+  if (!data)
   {
     return <Loader />
   }
   else
   {
     return (
-      <div className="animate__animated animate__fadeIn">
-        <Head>
-          <title>Bella Esthetics | Weight Reduction, Skin Care, Laser Treatment, Spa Service In Fairfax VA </title>
-          <link rel="icon" href="/favicon.ico" />
-          <meta name="keywords" content="facial treatment, weight reduction, skin care, aesthetics, esthetic clinic, acne treatment, anti-stress massage, massage, anti-ageing, vein removal, hair removal, laser treatment, wellness, healthy life, spa, salon, place, clinic, fairfax, virginia, area, annandale, alexandria"></meta>
-          <meta name="viewport" content="width=device-width, user-scalable=no"></meta>
-        </Head>
-        <Header data={headerData} />
-
+      <MainLayout headData={{title: 'Home', metaViewport: true}}>
+        <div className="animate__animated animate__fadeIn">
         <HeroSection data={data} />
         <div className="main-content">
           <Container className="mp-container" style={{backgroundImage: 'url(/img/bg-cool-1.png)'}}>
@@ -69,6 +55,7 @@ export default function Home() {
             </Container>
         </div>
       </div>
+      </MainLayout>
     )
   }
 }

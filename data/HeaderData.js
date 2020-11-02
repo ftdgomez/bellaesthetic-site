@@ -29,10 +29,7 @@ const HOME_EN = () =>{
         name: 'About Us',
         href: '/about-us'
       },
-      {
-        name: 'Book Now',
-        href: '/book-now'
-      },
+
     ]
   }
 }
@@ -52,10 +49,6 @@ const HOME_ES = () =>{
       {
         name: 'Acerca De Nosotros',
         href: '/about-us'
-      },
-      {
-        name: 'Book Now',
-        href: '/book-now'
       },
     ]
   }

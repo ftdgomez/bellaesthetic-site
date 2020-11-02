@@ -1,24 +1,34 @@
 import React from 'react'
-import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
-import { Container } from 'react-bootstrap'
-import { ServicesData } from '../../data/ServicesData'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 import matter from 'gray-matter'
 import fs from 'fs'
 import path from 'path'
 import { execSync } from 'child_process'
+import MainLayout from '../../layout/MainLayout'
+import SinglePageTitle from '../../components/SinglePageTitle'
+import ContactData from '../../components/ContactData'
+import VideoPlayer from '../../components/VideoPlayer'
 
 const Treatment = ({service, contents, data}) => {
   return (
-    <div>
-      <Head>
-        <title>{data.title}</title>
-      </Head>
-      <h4>{service}</h4>
-      <Container>
-        <ReactMarkdown>{contents}</ReactMarkdown>
+    <MainLayout headData={{title: data.title}}>
+      <SinglePageTitle data={{title: data.title}} />
+      <Container className="my-4">
+        <Row>
+          <Col sm={12} md={4} className="p-4 border rounded">
+            <Button block size="lg" className="text-white">Make an appointment</Button>
+            <h4 className="mt-4">Contact Us</h4>
+            <ContactData />
+            <VideoPlayer url={data.videourl} />
+
+          </Col>
+          <Col sm={12} md={8} className="md-container">
+            <ReactMarkdown>{contents}</ReactMarkdown>
+          </Col>
+        </Row>
       </Container>
-    </div>)
+    </MainLayout>)
 }
 
 export const getStaticPaths = async () => {

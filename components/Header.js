@@ -15,10 +15,17 @@ const Header = ({data}) => {
 
         <div className="dropdown">
           <span className="dropdown-title">{data.query === '?lang=es' ? 'Español - ES' : 'English - EN'}</span>
-          <div className="dropdown-content">
-            <a  href={'?lang=es'}>Español - ES</a>
-            <a href={'?lang=en'} >English - EN</a>
-          </div>
+          {!location.pathname.includes('services/') ? 
+            <div className="dropdown-content">
+              <a  href={'?lang=es'}>Español - ES</a>
+              <a href={'?lang=en'} >English - EN</a>
+            </div>
+            :
+            <div className="dropdown-content">
+              <a  href={'/services?lang=es'}>Español - ES</a>
+              <a href={'/services'} >English - EN</a>
+            </div>
+          }
         </div>
         <a target="_blank" href="https://www.instagram.com/bella_esthetics/">
           <img className="ig-logo" src="/img/ig.png" alt=""/>

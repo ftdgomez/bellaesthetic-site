@@ -1,53 +1,41 @@
 import {useState, useEffect} from 'react'
-import Head from 'next/head'
-import Header from '../../components/Header'
 import { Container, Row, Col  } from 'react-bootstrap'
-import { HeaderData } from '../../data/HeaderData'
 import { ServicesData } from '../../data/ServicesData'
 import Link from 'next/link'
 import matter from 'gray-matter'
 import Loader from '../../components/Loader'
 import { execSync } from 'child_process'
 import fs from 'fs'
+import MainLayout from '../../layout/MainLayout'
+import SinglePageTitle from '../../components/SinglePageTitle'
 
 const services = ({enddata}) => {
 
     const [data, setData] = useState(false)
-    const [headerData, setHeaderData] = useState(false)
 
     useEffect(()=> {
       if (!data){
         const search = location.search.split('=')[1];
         setData( search === 'es' ? enddata.es : enddata.en)
       }
-      if (!headerData)
-      {
-        setHeaderData(HeaderData('en'))
-      }
       console.log(data)
-    }, [data, headerData])
-    if (!data || !headerData)
+    }, [data])
+    if (!data)
     {
       return <Loader />
     }
     else
     {
       return (
-        <>
-          <Head>
-            <title>Services - Bella Esthetics | Weight Reduction, Skin Care, Laser Treatment, Spa Service In Fairfax VA </title>
-            <link rel="icon" href="/favicon.ico" />
-            <meta name="keywords" content="facial treatment, weight reduction, skin care, aesthetics, esthetic clinic, acne treatment, anti-stress massage, massage, anti-ageing, vein removal, hair removal, laser treatment, wellness, healthy life, spa, salon, place, clinic, fairfax, virginia, area, annandale, alexandria"></meta>
-          </Head>
-          <Header data={headerData} />
-          <div className="s-title-container" style={{backgroundImage: 'url(/services-bg.png)'}}>
-            <h1>{data.title}</h1> 
-          </div>
+        <MainLayout headData={{title: 'Home'}}>
+          <SinglePageTitle data={{title: data.title}} />
           <Container>
-            <div className="text-center">
-              <h2>{data.subtitle}</h2>
-              {data.description.map((el, index) => (<p key={`p-desc-4${index}`}>{el}</p>))} 
-               <h2>{data.bodyTtitle}</h2>
+            <div className="text-center mt-4">
+              <h2 className="border-bottom pb-2">{data.subtitle}</h2>
+              <div className="d-sm-block d-md-flex text-left">
+                {data.description.map((el, index) => (<p className="border-left border-primary px-4" key={`p-desc-4${index}`}>{el}</p>))} 
+              </div>
+               <h2 className="border-bottom pb-2 mb-4">{data.bodyTtitle}</h2>
               <Row>
                 {
                   data.bodyT.map((el, index) => (
@@ -56,9 +44,12 @@ const services = ({enddata}) => {
                        <Link 
                        href={`/services/${el.url}/${data.query ? data.query : ''}`}>
                          <a
-                          style={{backgroundImage: `url()`}}
+                          style={{backgroundImage: `url(${el.picture})`,
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center'
+                          }}
                           className="body-t-item">
-                          <h4>{el.title}</h4>
+                            <h4>{el.title}</h4>
                          </a>
                        </Link>
                     </Col>
@@ -75,11 +66,14 @@ const services = ({enddata}) => {
                      key={`body-t-${index}`} sm={12} md={4}>
                        <Link
                          href={`/services/${el.url}/${data.query ? data.query : ''}`}>
-                        <a 
-                        style={{backgroundImage: `url()`}}
-                        className="body-t-item">
-                            <h4>{el.title}</h4>
-                        </a>
+                         <a
+                          style={{backgroundImage: `url(${el.picture})`,
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center'
+                          }}
+                          className="body-t-item">
+                            <h4 className="text-white">{el.title}</h4>
+                         </a>
                        </Link>
                     </Col>
                   ))
@@ -87,7 +81,7 @@ const services = ({enddata}) => {
               </Row>
             </div>
           </Container>
-        </>
+        </MainLayout>
       )
     }
   }

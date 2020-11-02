@@ -2,6 +2,7 @@
 title: VIBRATION PLATFORM
 url: vibration-platform
 picture: default.jpg
+videourl: sztFHij0_W0
 ---
 
 # VIBRATION PLATFORM
