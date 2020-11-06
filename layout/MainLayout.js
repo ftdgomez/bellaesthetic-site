@@ -34,8 +34,7 @@ const MainLayout = ({children, headData}) => {
           }
           <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"></link>
           <script dangerouslySetInnerHTML={{__html: `
-              <!-- Load Facebook SDK for JavaScript -->
-              <script>
+            
                 window.fbAsyncInit = function() {
                   FB.init({
                     xfbml            : true,
@@ -49,9 +48,8 @@ const MainLayout = ({children, headData}) => {
                 js = d.createElement(s); js.id = id;
                 js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
                 fjs.parentNode.insertBefore(js, fjs);
-              }(document, 'script', 'facebook-jssdk'));</script>
-        
-              <!-- Your Chat Plugin code -->
+              }(document, 'script', 'facebook-jssdk'));
+    
               `}} />
         </Head>
         <div id="fb-root"></div>
