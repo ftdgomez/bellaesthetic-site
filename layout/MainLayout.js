@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, Fragment} from 'react'
 import Head from 'next/head'
 import Header from '../components/Header'
 import { HeaderData } from '../data/HeaderData'
@@ -34,12 +34,9 @@ const MainLayout = ({children, headData}) => {
           }
           <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"></link>
         </Head>
-        <Header data={headerData} />
-
         <div id="fb-root"></div>
         <script dangerouslySetInnerHTML={{__html: `
             <!-- Load Facebook SDK for JavaScript -->
-            <div id="fb-root"></div>
             <script>
               window.fbAsyncInit = function() {
                 FB.init({
@@ -57,12 +54,16 @@ const MainLayout = ({children, headData}) => {
             }(document, 'script', 'facebook-jssdk'));</script>
       
             <!-- Your Chat Plugin code -->
+            `}} />
             <div class="fb-customerchat"
-              attribution=setup_tool
+              attribution={'setup_tool'}
               page_id="182627661817675"
         theme_color="#e68585">
             </div>
-            `}} />
+            
+        <Header data={headerData} />
+
+        <div id="fb-root"></div>
 
         {children}
         
