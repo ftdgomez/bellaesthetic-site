@@ -1,7 +1,7 @@
 ---
 title: Radiofrequency
 url: radiofrequency
-picture: default.jpg
+picture: IMG_3179.JPG
 ---
 
 # Radiofrequency 

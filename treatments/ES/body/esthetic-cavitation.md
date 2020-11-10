@@ -1,7 +1,7 @@
 ---
 title: ESTHETIC CAVITATION
 url: esthetic-cavitation
-picture: default.jpg
+picture: cavitacion.jpg
 ---
 
 # ESTHETIC CAVITATION

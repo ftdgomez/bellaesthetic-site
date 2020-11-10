@@ -7,7 +7,7 @@ const Header = ({data}) => {
 
   return (
     <header className="custom-header-container">
-      <Link href="/"><img src="/img/logo.png" alt=""/></Link>  
+      <Link href="/"><a><img src="/img/logo.png" alt=""/></a></Link>  
       <nav className={`custom-header ${sidebar && 'sidebarActive'}`}>
 
         {data.links.map((el, index) => (

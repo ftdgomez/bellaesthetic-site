@@ -1,7 +1,7 @@
 ---
 title: ANTI-AGING FACIAL
 url: anti-aging-facial
-picture: default.jpg
+picture: anti-aging-facial.jpg
 ---
 
 ## What is an anti-aging facial?

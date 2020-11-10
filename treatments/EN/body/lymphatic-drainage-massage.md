@@ -1,7 +1,7 @@
 ---
 title: Lymphatic Drainage Massage
 url: lymphatic-drainage-massage
-picture: drenaje-linfatico.jpg
+picture: drenaje-linfatico-celulitis.jpg
 ---
 
 It may sound like a medical procedure straight out of a science fiction movie, and spa clients may be turned off by its unglam name initially, but once they discover the benefits of lymphatic drainage massage, they’re hooked.

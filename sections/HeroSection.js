@@ -30,22 +30,7 @@ const HeroSection = ({data}) => {
                   </a>
                 </div>
                 <div style={{marginLeft: 'auto', marginTop: 'auto'}}>
-                <Carousel>
-
-                {
-                  data.heroSection.serviceCards.map((el, index) => (
-                    <Carousel.Item key={`carousel-item-${index}`}>
-                      <Card.Body className="card-carousel-item bg-white rounded">
-                      <Card.Title className="font-weight-bold mt-2">{el.title}</Card.Title>
-                          <Card.Text>
-                            {el.description}
-                          </Card.Text>
-                          <Button variant="primary">{el.btn}</Button>  
-                      </Card.Body>
-                    </Carousel.Item>
-                  ))
-                }
-                </Carousel>
+   
    
                 </div>
             </Col>

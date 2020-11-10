@@ -1,7 +1,8 @@
 ---
 title: VIBRATION PLATFORM
 url: vibration-platform
-picture: default.jpg
+picture: vibration-platform-machines-2020.jpg
+videourl: sztFHij0_W0
 ---
 
 # VIBRATION PLATFORM

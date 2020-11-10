@@ -1,7 +1,7 @@
 ---
 title: PEELING
 url: peeling
-picture: default.jpg
+picture: IMG_0610.JPG
 ---
 
 ## SOLVE COMMON SKIN CONCERNS

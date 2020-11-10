@@ -1,7 +1,7 @@
 ---
 title: DERMAPEN
 url: dermapen
-picture: default.jpg
+picture: dermapen.jpg
 ---
 
 # DERMAPEN

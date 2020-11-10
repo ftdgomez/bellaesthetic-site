@@ -1,7 +1,7 @@
 ---
-title: ANTI-AGING FACIAL
+title: ANTI-ACNE FACIAL
 url: anti-acne-facial
-picture: default.jpg
+picture: anti-acne.jpg
 ---
 
 # ANTI-AGING FACIAL
