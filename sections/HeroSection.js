@@ -30,10 +30,10 @@ const HeroSection = ({data}) => {
                   <h2 className="pt-md-4  font-weight-bold">
                   {data.heroSection.mainTitle.split(' ').map((el, index) => (<span key={`hero-title-item-${index}`}>{el}{' '}{index === 1 && <br />}</span>))}
                   </h2>
-                  <button onClick={handleChatMsg(data.heroSection.btn1.text)} href="/" size="lg" className="btn btn-primary mr-md-4 text-white">
+                  <button onClick={()=>handleChatMsg(data.heroSection.btn1.text)} href="/" size="lg" className="btn btn-primary mr-md-4 text-white">
                     {data.heroSection.btn1.text}
                   </button>
-                  <button onClick={handleChatMsg(data.heroSection.btn2.text)} size="lg" className="btn btn-secondary mt-4 mt-md-0 text-white" variant="secondary">
+                  <button onClick={()=>handleChatMsg(data.heroSection.btn2.text)} size="lg" className="btn btn-secondary mt-4 mt-md-0 text-white" variant="secondary">
                     {data.heroSection.btn2.text}
                   </button>
                 </div>
