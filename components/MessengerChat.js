@@ -10,3 +10,4 @@ export class MessengerChat extends Component {
     );
   }
 }
+

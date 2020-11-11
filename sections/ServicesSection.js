@@ -10,10 +10,11 @@ const ServicesSection = ({data}) => {
             {
               data.mostPopular.items.map((el, index) => (
                 <Col key={`most_popular_item-${index}`} sm={12} md={4}>
-                  <Link href="/">
+                  <Link href={el.url}>
                     <div className="mp-img"
                       style={{
                         backgroundImage: `url(${el.picture})`,
+                        backgroundSize: 'cover'
                       }}>
                       <div className="mp-item">
                         {el.title}

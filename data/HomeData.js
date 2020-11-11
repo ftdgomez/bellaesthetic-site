@@ -37,15 +37,18 @@ const HOME_EN = () =>{
       items: [
         {
           title: 'Hydrafacials',
-          picture: '/img/hidrofacials.jpg'
+          picture: '/Hydrafacial-DF.jpg',
+          url: '/services/hydrafacial'
         },
         {
           title: 'Lymphatic Drainage',
-          picture: '/img/linfa.jpg'
+          picture: '/drenaje-linfatico-celulitis.jpg',
+          url: '/services/lymphatic-drainage-massage'
         },
         {
           title: 'IPL',
-          picture: '/img/ipl.jpg'
+          picture: '/img/ipl.jpg',
+          url: '/services/ipl'
         }
       ]
     },
@@ -86,15 +89,18 @@ const HOME_ES = () =>{
       items: [
         {
           title: 'Hydrafacials',
-          picture: '/img/hidrofacials.jpg'
+          picture: '/Hydrafacial-DF.jpg',
+          url: '/services/hydrafacial'
         },
         {
           title: 'Drenaje Linfático',
-          picture: '/img/linfa.jpg'
+          picture: '/drenaje-linfatico-celulitis.jpg',
+          url: '/services/lymphatic-drainage-massage'
         },
         {
           title: 'IPL',
-          picture: '/img/ipl.jpg'
+          picture: '/img/ipl.jpg',
+          url: '/services/ipl'
         }
       ]
     },

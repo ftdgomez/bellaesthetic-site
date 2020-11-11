@@ -5,7 +5,6 @@ import { HeaderData } from '../data/HeaderData'
 import Loader from '../components/Loader'
 import GoogleMaps from '../components/GoogleMaps'
 import Footer from '../components/Footer'
-import {MessengerChat} from '../components/MessengerChat'
 
 const MainLayout = ({children, headData}) => {
   const [headerData, setHeaderData] = useState(false)
@@ -16,6 +15,21 @@ const MainLayout = ({children, headData}) => {
       const search = location.search.split('=')[1];
       setHeaderData(HeaderData(search ? 'es' : ''))
     }
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v9.0'
+        });
+      };
+
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
   }, [headerData])
 
   if (!headerData)
@@ -34,18 +48,13 @@ const MainLayout = ({children, headData}) => {
           <meta name="viewport" content="width=device-width, user-scalable=no"></meta>
           }
           <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"></link>
-
         </Head>
-   
-
             
         <Header data={headerData} />
-
       
-
         {children}
         
-        <MessengerChat />
+
         <Footer />
       </>
     )
@@ -54,3 +63,4 @@ const MainLayout = ({children, headData}) => {
 
 export default MainLayout
  
+
