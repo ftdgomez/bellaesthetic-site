@@ -5,7 +5,7 @@ import { HeaderData } from '../data/HeaderData'
 import Loader from '../components/Loader'
 import GoogleMaps from '../components/GoogleMaps'
 import Footer from '../components/Footer'
-import FacebookProvider, { CustomChat } from 'react-facebook'
+import {MessengerChat} from '../components/MessengerChat'
 
 const MainLayout = ({children, headData}) => {
   const [headerData, setHeaderData] = useState(false)
@@ -25,7 +25,7 @@ const MainLayout = ({children, headData}) => {
   else
   {
     return (
-      <FacebookProvider appId="845685419375586">
+      <>
         <Head>
           <title>{headData.title}- Bella Esthetics | Weight Reduction, Skin Care, Laser Treatment, Spa Service In Fairfax VA</title>
           <link rel="icon" href="/favicon.ico" />
@@ -44,9 +44,10 @@ const MainLayout = ({children, headData}) => {
       
 
         {children}
-        <CustomChat  pageId="182627661817675" minimized={false}/>
+        
+        <MessengerChat />
         <Footer />
-      </FacebookProvider>
+      </>
     )
   }
 }
