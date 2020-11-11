@@ -4,7 +4,6 @@ import MakeAppointmentBtn from './MakeAppointmentBtn'
 
 const Header = ({data}) => {
   const [sidebar, setSidebar] = useState(false)
-
   return (
     <header className="custom-header-container">
       <Link href="/"><a><img src="/img/logo.png" alt=""/></a></Link>  

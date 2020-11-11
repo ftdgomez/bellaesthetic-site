@@ -2,6 +2,14 @@ import React from 'react'
 import { Container, Row, Col, Button, Card, Carousel } from 'react-bootstrap'
 
 const HeroSection = ({data}) => {
+  const handleChatMsg = (msg) => {
+    window.FB.CustomerChat.show()
+    window.FB.CustomerChat.update({  
+      logged_in_greeting: msg,
+      logged_out_greeting: 'Log in to Chat with Us and make your appointment!',
+    });
+  }
+
   return (
     <div>
         <div style={{
@@ -22,16 +30,14 @@ const HeroSection = ({data}) => {
                   <h2 className="pt-md-4  font-weight-bold">
                   {data.heroSection.mainTitle.split(' ').map((el, index) => (<span key={`hero-title-item-${index}`}>{el}{' '}{index === 1 && <br />}</span>))}
                   </h2>
-                  <a href="/" size="lg" className="btn btn-primary mr-md-4 text-white">
+                  <button onClick={handleChatMsg(data.heroSection.btn1.text)} href="/" size="lg" className="btn btn-primary mr-md-4 text-white">
                     {data.heroSection.btn1.text}
-                  </a>
-                  <a href="/" size="lg" className="btn btn-secondary mt-4 mt-md-0 text-white" variant="secondary">
+                  </button>
+                  <button onClick={handleChatMsg(data.heroSection.btn2.text)} size="lg" className="btn btn-secondary mt-4 mt-md-0 text-white" variant="secondary">
                     {data.heroSection.btn2.text}
-                  </a>
+                  </button>
                 </div>
                 <div style={{marginLeft: 'auto', marginTop: 'auto'}}>
-   
-   
                 </div>
             </Col>
             </Row>

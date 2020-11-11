@@ -14,6 +14,7 @@ import Loader from '../components/Loader'
 export default function Home() {
   const [data, setData] = useState(null)
 
+
   useEffect(() => {
     if (!data)
     {
