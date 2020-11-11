@@ -5,6 +5,7 @@ import { HeaderData } from '../data/HeaderData'
 import Loader from '../components/Loader'
 import GoogleMaps from '../components/GoogleMaps'
 import Footer from '../components/Footer'
+import FacebookProvider, { CustomChat } from 'react-facebook'
 
 const MainLayout = ({children, headData}) => {
   const [headerData, setHeaderData] = useState(false)
@@ -24,7 +25,7 @@ const MainLayout = ({children, headData}) => {
   else
   {
     return (
-      <>
+      <FacebookProvider appId="845685419375586">
         <Head>
           <title>{headData.title}- Bella Esthetics | Weight Reduction, Skin Care, Laser Treatment, Spa Service In Fairfax VA</title>
           <link rel="icon" href="/favicon.ico" />
@@ -33,42 +34,22 @@ const MainLayout = ({children, headData}) => {
           <meta name="viewport" content="width=device-width, user-scalable=no"></meta>
           }
           <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"></link>
-          <script dangerouslySetInnerHTML={{__html: `
-            
-                window.fbAsyncInit = function() {
-                  FB.init({
-                    xfbml            : true,
-                    version          : 'v8.0'
-                  });
-                };
-        
-                (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-                fjs.parentNode.insertBefore(js, fjs);
-              }(document, 'script', 'facebook-jssdk'));
-    
-              `}} />
+
         </Head>
-        <div id="fb-root"></div>
-            <div className="fb-customerchat"
-              attribution={'setup_tool'}
-              page_id="182627661817675"
-        theme_color="#e68585">
-            </div>
+   
+
             
         <Header data={headerData} />
 
-        <div id="fb-root"></div>
+      
 
         {children}
-        
+        <CustomChat  pageId="182627661817675" minimized={false}/>
         <Footer />
-      </>
+      </FacebookProvider>
     )
   }
 }
 
 export default MainLayout
+ 

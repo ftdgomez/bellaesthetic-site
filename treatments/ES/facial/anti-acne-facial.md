@@ -1,10 +1,10 @@
 ---
-title: ANTI-AGING FACIAL
+title: ANTI-ACNE FACIAL
 url: anti-acne-facial
 picture: anti-acne.jpg
 ---
 
-# ANTI-AGING FACIAL
+# ANTI-ACNE FACIAL
 
 What is the Deep Cleaning Anti-Acne Facial treatment?
 The Anti-Acne Facial is a purifying treatment that will deep clean your skin while penetrates through the pores, eliminating bacteria. Not all acne is the same. At Bella Esthetics  our approach is highly customized. Whether your acne is caused by high bacteria levels, hormonal changes, stress, or is simply a reaction to the environment, we will customize a facial to combat your acne. This treatment will include a deep cleanse, exfoliation, a chemical peel, and a detoxifying mask that will help draw out impurities and prevent periodic or ongoing breakouts. Having a skin analysis with our Acne Specialist is the most important step towards having clearer skin.
