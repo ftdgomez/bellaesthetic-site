@@ -19,8 +19,11 @@ const Treatment = ({service, contents, data}) => {
           <Col sm={12} md={4} className="p-4 border rounded">
             <h4 className="mt-4">Contact Us</h4>
             <ContactData />
-            <VideoPlayer url={data.videourl} />
-
+            { data.videourl ?
+              <VideoPlayer url={data.videourl} />
+              :
+              <img src={`/${data.picture}`} className="w-100" />
+            }
           </Col>
           <Col sm={12} md={8} className="md-container">
             <ReactMarkdown>{contents}</ReactMarkdown>

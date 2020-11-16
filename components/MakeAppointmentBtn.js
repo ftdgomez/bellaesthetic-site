@@ -24,7 +24,7 @@ const MakeAppointmentBtn = () => {
 
   return (
     <div>
-      <Button onClick={handleChatMsg} block size="md" className="text-white" variant="danger" block>
+      <Button onClick={handleChatMsg} block size="md" className="text-white" variant="success" block>
         Make an appointment
       </Button>
     </div>

@@ -1,7 +1,7 @@
 ---
 title: MEN’S SKIN CARE
 url: men-skin-care
-picture: default.jpg
+picture: menskinecare.jpg
 ---
 
 # MEN’S SKIN CARE

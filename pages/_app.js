@@ -4,7 +4,7 @@ function MyApp({ Component, pageProps }) {
   return (<>
   <Component {...pageProps} />
   <div id="fb-root"></div>
-        <div class="fb-customerchat"
+        <div className="fb-customerchat"
           attribution="setup_tool"
           page_id="182627661817675"
         theme_color="#e68585">

@@ -47,7 +47,7 @@ export default function Home() {
           <Container>
             <PromoCard
               subtitle="Featured Product"
-              title="$20 de descuento en tu primera visita"
+              title="2X3   with 2 Hydrafacial you can get 1 free dermaplaning"
               btnText="Agendar Cita"
               link="/#"
               picture="temp.jpg"

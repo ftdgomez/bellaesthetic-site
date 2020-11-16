@@ -56,7 +56,7 @@ const HOME_EN = () =>{
       title: 'Our Combos',
       picture1: '/default_combos.jpg',
       picture2: '/default_combos.jpg',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit commodo tortor et scelerisque. Proin interdum porttitor condimentum. Aenean molestie nulla sed mattis porttitor.',
+      text: 'Save money getting better results.',
       btn: {
         link: '/',
         text: 'Book Now'
@@ -80,7 +80,7 @@ const HOME_ES = () =>{
       serviceCards: [
         {
           title: "Post Operatorio",
-          description: "Después de las cirugías cosméticas, los canales linfáticos se interrumpen y tardan unos tres meses en establecer nuevas conexiones. Masajes linfáticos en rutinas de atención posoperatoria del paciente benefician su recuperación.",
+          description: "Save money getting better results",
           btn: 'Leer Más'
         }
       ],
@@ -90,17 +90,17 @@ const HOME_ES = () =>{
         {
           title: 'Hydrafacials',
           picture: '/Hydrafacial-DF.jpg',
-          url: '/services/hydrafacial'
+          url: '/services/hydrafacial-es'
         },
         {
           title: 'Drenaje Linfático',
           picture: '/drenaje-linfatico-celulitis.jpg',
-          url: '/services/lymphatic-drainage-massage'
+          url: '/services/masaje-drenaje-linfatico'
         },
         {
           title: 'IPL',
           picture: '/img/ipl.jpg',
-          url: '/services/ipl'
+          url: '/services/ipl-es'
         }
       ]
     },
@@ -108,7 +108,7 @@ const HOME_ES = () =>{
       title: 'Nuestros Paquetes',
       picture1: '/default_combos.jpg',
       picture2: '/default_combos.jpg',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit commodo tortor et scelerisque. Proin interdum porttitor condimentum. Aenean molestie nulla sed mattis porttitor.',
+      text: '¡Ahorra dinero y obtén mejores resultados!',
       btn: {
         link: '/',
         text: 'Agendar cita'
