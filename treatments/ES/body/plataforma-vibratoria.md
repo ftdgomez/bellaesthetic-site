@@ -2,6 +2,7 @@
 title: PLATAFORMA VIBRATORIA
 url: plataforma-vibratoria
 picture: vibration-platform-machines-2020.jpg
+bg: body
 ---
 
 # PLATAFORMA DE VIBRACIÓN

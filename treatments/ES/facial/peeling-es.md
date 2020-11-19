@@ -2,6 +2,8 @@
 title: PEELING
 url: peeling-es
 picture: IMG_0610.JPG
+bg: facial
+
 ---
 
 ## RESOLVER LAS PREOCUPACIONES COMUNES DE LA PIEL ##

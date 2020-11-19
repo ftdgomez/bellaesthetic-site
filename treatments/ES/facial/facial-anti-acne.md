@@ -2,6 +2,8 @@
 title: ANTI-ACNE FACIAL
 url: facial-anti-acne
 picture: anti-acne.jpg
+bg: facial
+
 ---
 
 # FACIAL ANTI-ENVEJECIMIENTO

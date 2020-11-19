@@ -2,6 +2,7 @@
 title: MASAJE REDUCTIVO
 url: masaje-reductivo
 picture: IMG_2348.JPG
+bg: body
 ---
 
 # MASAJE REDUCTOR

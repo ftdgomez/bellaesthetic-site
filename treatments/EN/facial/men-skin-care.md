@@ -2,6 +2,7 @@
 title: MEN’S SKIN CARE
 url: men-skin-care
 picture: menskinecare.jpg
+bg: facial
 ---
 
 # MEN’S SKIN CARE

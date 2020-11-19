@@ -2,6 +2,7 @@
 title: CUIDADO DE LA PIEL DE LOS HOMBRES
 url: cuidado-piel-hombre
 picture: menskinecare.jpg
+bg: facial
 ---
 
 

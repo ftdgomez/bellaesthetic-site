@@ -2,6 +2,8 @@
 title: DERMAPEN
 url: dermapen-es
 picture: dermapen.jpg
+bg: facial
+
 ---
 
 #### ¿Cómo funciona el DermaPen?

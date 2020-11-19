@@ -2,6 +2,7 @@
 title: Masaje Drenaje Linfático
 url: masaje-drenaje-linfatico
 picture: drenaje-linfatico-celulitis.jpg
+bg: body
 ---
 
 Puede parecer un procedimiento médico sacado directamente de una película de ciencia ficción, y los clientes del spa pueden ser espantados por su nombre anti-glamuroso inicialmente, pero una vez que descubren los beneficios del masaje de drenaje linfático, están enganchados.

@@ -2,6 +2,8 @@
 title: RADIO FREQUENCY
 url: radio-frecuency
 picture: frcuenciacorporal.jpg
+videourl: EsutOlNR5co
+bg: body
 ---
 
 Radio frequency (RF) treatments utilize high frequency electrical currents  in order to intensively heat the deeper (and some times the superficial) layers of the skin.

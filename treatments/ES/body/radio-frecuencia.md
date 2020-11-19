@@ -2,6 +2,8 @@
 title: RADIO FRECUENCIA
 url: radio-frecuencia
 picture: frcuenciacorporal.jpg
+videourl: EsutOlNR5co
+bg: body
 ---
 
 Los tratamientos de radiofrecuencia (RF) utilizan corrientes eléctricas de alta frecuencia para calentar intensamente las capas más profundas (y a veces las superficiales) de la piel.

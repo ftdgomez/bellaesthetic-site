@@ -2,6 +2,7 @@
 title: PEELING
 url: peeling
 picture: IMG_0610.JPG
+bg: facial
 ---
 
 ## SOLVE COMMON SKIN CONCERNS

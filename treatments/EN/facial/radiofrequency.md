@@ -2,6 +2,8 @@
 title: Radiofrequency
 url: radiofrequency
 picture: IMG_3179.JPG
+videourl: EFF2JDXvlxY
+bg: facial
 ---
 
 # Radiofrequency 

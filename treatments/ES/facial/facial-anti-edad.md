@@ -2,6 +2,8 @@
 title:  FACIAL ANTI EDAD
 url: facial-anti-edad
 picture: anti-aging-facial.jpg
+bg: facial
+
 ---
 
 ## ¿Qué es un facial anti-envejecimiento?

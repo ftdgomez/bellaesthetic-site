@@ -2,6 +2,7 @@
 title: DERMAPEN
 url: dermapen
 picture: dermapen.jpg
+bg: facial
 ---
 
 # DERMAPEN

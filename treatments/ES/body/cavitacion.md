@@ -2,6 +2,7 @@
 title: CAVITACIÓN
 url: cavitacion
 picture: cavitacion.jpg
+bg: body
 ---
 
 # CAVITACIÓN

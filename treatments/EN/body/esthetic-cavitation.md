@@ -2,6 +2,7 @@
 title: ESTHETIC CAVITATION
 url: esthetic-cavitation
 picture: cavitacion.jpg
+bg: body
 ---
 
 # ESTHETIC CAVITATION

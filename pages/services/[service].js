@@ -13,7 +13,7 @@ import VideoPlayer from '../../components/VideoPlayer'
 const Treatment = ({service, contents, data}) => {
   return (
     <MainLayout headData={{title: data.title}}>
-      <SinglePageTitle data={{title: data.title}} />
+      <SinglePageTitle data={{title: data.title, bg: data.bg}} />
       <Container className="my-4">
         <Row>
           <Col sm={12} md={4} className="p-4 border rounded">
