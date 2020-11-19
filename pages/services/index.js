@@ -28,7 +28,7 @@ const services = ({enddata}) => {
     {
       return (
         <MainLayout headData={{title: 'Home'}}>
-          <SinglePageTitle data={{title: data.title}} />
+          <SinglePageTitle data={{title: data.title, bg: 'index'}} />
           <Container>
             <div className="text-center mt-4">
               <h2 className="border-bottom pb-2">{data.subtitle}</h2>
