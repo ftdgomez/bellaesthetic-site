@@ -8,6 +8,8 @@ import { execSync } from 'child_process'
 import fs from 'fs'
 import MainLayout from '../../layout/MainLayout'
 import SinglePageTitle from '../../components/SinglePageTitle'
+import Image from 'next/image'
+import {bgWrap, bgText} from '../../bg.module.css'
 
 const services = ({enddata}) => {
 
@@ -41,17 +43,24 @@ const services = ({enddata}) => {
                   data.bodyT.map((el, index) => (
                     <Col
                      key={`body-t-${index}`} sm={12} md={4}>
-                       <Link 
-                       href={`/services/${el.url}/${data.query ? data.query : ''}`}>
-                         <a
-                          style={{backgroundImage: `url(${el.picture})`,
-                          backgroundSize: 'cover',
-                          backgroundPosition: 'center'
-                          }}
-                          className="body-t-item">
-                            <h4>{el.title}</h4>
-                         </a>
-                       </Link>
+                        <Link href={`/services/${el.url}/${data.query ? data.query : ''}`}>
+                          <a>
+                            <div className="d-flex justify-content-center mb-4">
+                              <div className={bgWrap}>
+                                <Image
+                                  alt=""
+                                  src={'/' + el.picture}
+                                  layout="fill"
+                                  objectFit="cover"
+                                  quality={100}
+                                />
+                              </div>
+                              <div className={bgText + ' ' + 'd-flex align-items-end justify-content-center'}>
+                                <p style={{fontSize: '20px'}} className="bg-primary w-75 p-2 text-white text-uppercase">{el.title}</p>
+                              </div>
+                            </div>
+                          </a>
+                        </Link>
                     </Col>
                   ))
                 }
@@ -64,17 +73,24 @@ const services = ({enddata}) => {
                   data.faceT.map((el, index) => (
                     <Col
                      key={`body-t-${index}`} sm={12} md={4}>
-                       <Link
-                         href={`/services/${el.url}/${data.query ? data.query : ''}`}>
-                         <a
-                          style={{backgroundImage: `url(${el.picture})`,
-                          backgroundSize: 'cover',
-                          backgroundPosition: 'center'
-                          }}
-                          className="body-t-item">
-                            <h4 className="text-white">{el.title}</h4>
-                         </a>
-                       </Link>
+                        <Link href={`/services/${el.url}/${data.query ? data.query : ''}`}>
+                          <a>
+                            <div className="d-flex justify-content-center mb-4">
+                              <div className={bgWrap}>
+                                <Image
+                                  alt=""
+                                  src={'/' + el.picture}
+                                  layout="fill"
+                                  objectFit="cover"
+                                  quality={100}
+                                />
+                              </div>
+                              <div className={bgText + ' ' + 'd-flex align-items-end justify-content-center'}>
+                                <p style={{fontSize: '20px'}} className="bg-primary w-75 p-2 text-white text-uppercase">{el.title}</p>
+                              </div>
+                            </div>
+                          </a>
+                        </Link>
                     </Col>
                   ))
                 }

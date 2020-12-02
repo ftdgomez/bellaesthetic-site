@@ -1,9 +1,9 @@
 ---
 title: HYDRAFACIAL
 url: hydrafacial-es
-picture: Hydrafacial-DF.jpg
+picture: ipl.jpg
 bg: facial
-
+videourl: 724iyp2Wk2g
 ---
 
 # IPL

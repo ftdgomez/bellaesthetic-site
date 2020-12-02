@@ -1,0 +1,16 @@
+.bgWrap {
+    position: absolute;
+    height: 320px;
+    width: 396px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .bgText {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    text-align: center;
+    height: 320px;
+    width: 396px;
+  }
