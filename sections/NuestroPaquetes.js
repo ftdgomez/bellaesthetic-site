@@ -1,4 +1,5 @@
 import {Row, Col, Container} from 'react-bootstrap'
+import PricingItem from '../components/PricingItem'
 
 const NuestroPaquetes = ({data}) => {
   return (
@@ -7,26 +8,61 @@ const NuestroPaquetes = ({data}) => {
         <Container className="py-4">
             <h3 className="text-center">{data.nuestrosPaquetes.title}</h3>
             <Row>
-              <Col sm={12} md={3} >
-                <img className="w-100" src={data.nuestrosPaquetes.picture1} alt=""/>
+              <Col>
+                <PricingItem 
+                  title="Paquetes Corporales"
+                  items={[
+                    '12 sesiones',
+                    '2 veces por semana',
+                    '1 hora cada sesión',
+                    '6 semanas de tratamiento.'
+                  ]}
+                />
               </Col>
-              <Col sm={12} md={3} >
-                <img className="w-100" src={data.nuestrosPaquetes.picture2} alt=""/>
+              <Col>
+                <PricingItem 
+                  title="Paquetes Corporales"
+                  items={[
+                    '6 sesiones',
+                    '2 veces por semana',
+                    '1 hora cada sesión',
+                    '3 semanas de tratamiento.'
+                  ]}
+                />
               </Col>
-              <Col sm={12} md={3} >
-                <img className="w-100" src={data.nuestrosPaquetes.picture2} alt=""/>
+              <Col>
+                <PricingItem 
+                  title="Paquete facial"
+                  items={[
+                    '3 sesiones',
+                    '1 cada 3 semanas'
+                  ]}
+                />
               </Col>
-              <Col sm={12} md={3} >
-                <img className="w-100" src={data.nuestrosPaquetes.picture2} alt=""/>
+              <Col>
+                <PricingItem 
+                  title="Radiofrecuencia tripolar facial"
+                  items={[
+                    '1 sesión semanal',
+                    '6 semanas',
+                  ]}
+                />
+              </Col>
+              <Col>
+                <PricingItem 
+                  title="Paquetes de IPL"
+                  items={[
+                    'Paquete 6 sesiones',
+                    '12 sesiones',
+                  ]}
+                />
               </Col>
             </Row>
+
             <p className="text-center mt-4">
               <strong>
-                {data.nuestrosPaquetes.text} <br />
+                {data.nuestrosPaquetes.text}
               </strong>
-              <a className="np-btn" href={data.nuestrosPaquetes.btn.link}>
-                {data.nuestrosPaquetes.btn.text}
-              </a>
             </p>
         </Container>
       </div>
