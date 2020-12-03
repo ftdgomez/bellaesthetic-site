@@ -53,7 +53,7 @@ const HOME_EN = () =>{
       ]
     },
     nuestrosPaquetes: {
-      title: 'Our Combos',
+      title: 'Our Packages',
       picture1: '/default_combos.jpg',
       picture2: '/default_combos.jpg',
       text: 'Save money getting better results.',

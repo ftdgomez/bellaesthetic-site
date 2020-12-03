@@ -1,5 +1,9 @@
-import {Row, Col, Container} from 'react-bootstrap'
+import {Row, Col, Container, Card} from 'react-bootstrap'
 import PricingItem from '../components/PricingItem'
+import Link from 'next/link'
+
+
+
 
 const NuestroPaquetes = ({data}) => {
   return (
@@ -9,60 +13,45 @@ const NuestroPaquetes = ({data}) => {
             <h3 className="text-center">{data.nuestrosPaquetes.title}</h3>
             <Row>
               <Col>
-                <PricingItem 
-                  title="Paquetes Corporales"
-                  items={[
-                    '12 sesiones',
-                    '2 veces por semana',
-                    '1 hora cada sesión',
-                    '6 semanas de tratamiento.'
-                  ]}
-                />
+                  <Link href="/paquetes">
+                    <a>
+                      <Card className="bg-primary border-0">
+                        <Card.Img variant="top" src="/primera.JPG" style={{mixBlendMode: 'multiply'}} />
+                        <Card.Header><h4 className="text-center"><strong>3 Session</strong></h4></Card.Header>
+                      </Card> 
+                    </a>
+                  </Link>
               </Col>
               <Col>
-                <PricingItem 
-                  title="Paquetes Corporales"
-                  items={[
-                    '6 sesiones',
-                    '2 veces por semana',
-                    '1 hora cada sesión',
-                    '3 semanas de tratamiento.'
-                  ]}
-                />
+                <Link href="/paquetes">
+                  <a>
+                  <Card className="bg-primary border-0">
+                    <Card.Img variant="top" src="/segunda.JPG" style={{mixBlendMode: 'multiply'}} />
+                    <Card.Header><h4 className="text-center"><strong>6 Session</strong></h4></Card.Header>
+                  </Card>
+                  </a>
+                </Link>
               </Col>
               <Col>
-                <PricingItem 
-                  title="Paquete facial"
-                  items={[
-                    '3 sesiones',
-                    '1 cada 3 semanas'
-                  ]}
-                />
-              </Col>
-              <Col>
-                <PricingItem 
-                  title="Radiofrecuencia tripolar facial"
-                  items={[
-                    '1 sesión semanal',
-                    '6 semanas',
-                  ]}
-                />
-              </Col>
-              <Col>
-                <PricingItem 
-                  title="Paquetes de IPL"
-                  items={[
-                    'Paquete 6 sesiones',
-                    '12 sesiones',
-                  ]}
-                />
+                  <Link href="/paquetes">
+                    <a>
+                      <Card className="bg-primary border-0">
+                        <Card.Img variant="top" src="/tercera.JPG" style={{mixBlendMode: 'multiply'}} />
+                        <Card.Header><h4 className="text-center"><strong>12 Session</strong></h4></Card.Header>
+                      </Card>
+                    </a>
+                  </Link>
               </Col>
             </Row>
-
             <p className="text-center mt-4">
               <strong>
                 {data.nuestrosPaquetes.text}
               </strong>
+            </p>
+            <p className="text-center text-uppercase">
+              <Link href="/paquetes">
+                  <a className="btn btn-primary px-4 py-2"><strong>See our packages</strong></a>
+              </Link>                
             </p>
         </Container>
       </div>

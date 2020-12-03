@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 
-const MakeAppointmentBtn = () => {
+const MakeAppointmentBtn = ({text}) => {
 
   const handleChatMsg = () => {
     window.FB.CustomerChat.show()
@@ -25,7 +25,7 @@ const MakeAppointmentBtn = () => {
   return (
     <div>
       <Button onClick={handleChatMsg} block size="md" className="text-white" variant="success" block>
-        Make an appointment
+        {text ? text : 'Make an appointment'}
       </Button>
     </div>
   )
