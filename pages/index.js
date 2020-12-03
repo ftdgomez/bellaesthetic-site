@@ -9,6 +9,7 @@ import MainLayout from '../layout/MainLayout'
 import Loader from '../components/Loader'
 import Image from 'next/image'
 import Link from 'next/link'
+import MakeAppBrnContainer from '../components/MakeAppBtnContainer'
 
 export default function Home() {
   const [data, setData] = useState(null)
@@ -34,11 +35,15 @@ export default function Home() {
           <div className="main-content">
             <Container className="mp-container" style={{backgroundImage: 'url(/img/bg-cool-1.png)'}}>
               <ServicesSection data={data} />
-              <Image src="/descuento.jpeg" alt="descuento primera visita" width="1250px" height="503px" />
+              <MakeAppBrnContainer>
+                <Image src="/descuento.jpeg" alt="descuento primera visita" width="1250px" height="503px" />
+              </MakeAppBrnContainer>
             </Container>
             <NuestroPaquetes data={data} />
             <Container className="mt-4">
-              <Image src="/2x3.jpeg" alt="promoción 2 x 3" width="1250px" height="503px" />
+              <MakeAppBrnContainer>
+                  <Image src="/2x3.jpeg" alt="promoción 2 x 3" width="1250px" height="503px" />
+              </MakeAppBrnContainer>
               </Container>
           </div>
         </div>
