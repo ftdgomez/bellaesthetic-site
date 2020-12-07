@@ -1,7 +1,7 @@
 ---
 title: DERMAPEN
 url: dermapen-es
-picture: dermapen.jpg
+picture: dermapen0.jpg
 bg: facial
 
 ---
