@@ -48,6 +48,7 @@ const MainLayout = ({children, headData}) => {
           <meta name="viewport" content="width=device-width, user-scalable=no"></meta>
           }
           <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"></link>
+          <script src="/resize.js"></script>
         </Head>
             
         <Header data={headerData} />

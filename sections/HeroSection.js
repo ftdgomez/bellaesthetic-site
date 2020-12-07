@@ -17,10 +17,15 @@ const HeroSection = ({data}) => {
           minHeight: '100vh',
           width: '100%'
         }}></div>
-        <video autoPlay loop muted id="mainbg">
-          <source src="/bg-bella.mp4" type="video/mp4" />
-          Your browser does not support the video tag
-        </video>
+        {
+          window.innerWidth > 1024 ?
+          <video autoPlay loop muted id="mainbg">
+            <source src="/bg-bella.mp4" type="video/mp4" />
+            Your browser does not support the video tag
+          </video>
+          :
+          <div id="mainbg" style={{backgroundImage: 'url(/bg-mobile.png)', backgroundSize: 'cover', width: '100%'}}></div>
+        }
         <div className="main-hero">
           <div className="container-fluid">
             <Row className="vh-100">

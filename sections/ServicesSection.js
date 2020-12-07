@@ -14,7 +14,7 @@ const ServicesSection = ({data}) => {
                 <Col key={`most_popular_item-${index}`} sm={12} md={4}>
                   <Link href={el.url}>
                   <a>
-                    <div className="d-flex justify-content-center">
+                    <div className={`d-flex justify-content-center ${window.innerWidth < 1024 && 'mb-4'}`}>
                       <div className={bgWrap}>
                         <Image
                           alt=""
