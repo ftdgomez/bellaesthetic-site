@@ -1,7 +1,7 @@
 ---
 title: REDUCTIVE MASSAGE
 url: reductive-massage
-picture: IMG_2348.JPG
+picture: rms.jpg
 bg: body
 ---
 
