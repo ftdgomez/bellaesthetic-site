@@ -1,7 +1,7 @@
 ---
 url: lipolaser
 title: Lipo Laser
-picture: IMG_2320.JPG
+picture: lipolaser.jpg
 videourl: L9SgW7Bvj3Y
 bg: body
 ---
