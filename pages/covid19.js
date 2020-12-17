@@ -14,31 +14,31 @@ const AboutUs = () => {
         </p>
         <Row>
           <Col sm={12} md={6}>
-            <img className="text-center d-block mx-auto mb-2" style={{ width: '200px', height: '200px' }} src="/one.png" alt="" />
-            <p>
+            <img className="text-center d-block mx-auto my-4" style={{ width: '200px', height: '200px' }} src="/one.png" alt="" />
+            <p className="text-center" >
               Screening all patients, visitors and staff for any signs of a respiratory infection or potential exposure.
             </p>
           </Col>
           <Col sm={12} md={6}>
-            <img className="text-center d-block mx-auto mb-2" style={{ width: '200px', height: '200px' }} src="/two.png" alt="" />
-            <p>
+            <img className="text-center d-block mx-auto my-4" style={{ width: '200px', height: '200px' }} src="/two.png" alt="" />
+            <p className="text-center" >
               Arranging seating areas to allow for social distancing and following proper office and medical cleaning routines.
             </p>
           </Col>
           <Col sm={12} md={6}>
-            <img className="text-center d-block mx-auto mb-2" style={{ width: '200px', height: '200px' }} src="/tres.png" alt="" />
-            <p>
+            <img className="text-center d-block mx-auto my-4" style={{ width: '200px', height: '200px' }} src="/tres.png" alt="" />
+            <p className="text-center" >
             Limiting visitors coming into our office.
             </p>
           </Col>
           <Col sm={12} md={6}>
-            <img className="text-center d-block mx-auto mb-2" style={{ width: '200px', height: '200px' }} src="/cuatro.png" alt="" />
-            <p>
+            <img className="text-center d-block mx-auto my-4" style={{ width: '200px', height: '200px' }} src="/cuatro.png" alt="" />
+            <p className="text-center" >
             Requiring masks or face-coverings for all patients, visitors and staff.
             </p>
           </Col>
         </Row>
-        <p>
+        <p className="my-4">
           There is currently no vaccine to prevent the Coronavirus (COVID-19). The best way to prevent illness is to avoid being exposed to this virus. We encourage you to continue washing your hands with soap and water often, avoiding close contact with others, and cleaning and disinfecting frequently touched objects and surfaces.
         </p>
 
