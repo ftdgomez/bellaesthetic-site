@@ -20,22 +20,22 @@ const AboutUs = () => {
             <p>
             Our aim is to provide  anti aging treatments and procedures that complement and enhance the existing  beauty of our patients by helping to restore the youthful definition of the  face and body.
             <br /><br />
-            Our business was established in 2009, and we pride  ourselves on providing customers with high-quality product and personal service. Our office is coveniently located in the heart of Fairfax County.
+            Our business was established in 2009, and we pride  ourselves on providing customers with high-quality product and personal service. Our office is coveniently located in the heart of Fairfax City.
             </p>
           </Col>
           <Col className="d-flex algin-items-center justify-content-center">
-            <img style={{maxWidth: '420px'}} src="/about-us-1.jpg" />
+            <img style={{maxWidth: '420px', height: 'auto'}} src="/about-us-1.jpg" />
           </Col>
         </Row>
         <Row className="my-4">
           <Col className="d-flex algin-items-center justify-content-center">
-            <img style={{maxWidth: '420px'}} src="/about-us-2.jpg" />
+            <img style={{maxWidth: '420px', height: 'auto'}} src="/about-us-2.jpg" />
           </Col>
           <Col className="border my-4 d-flex aling-items-center justify-content-center flex-column p-md-4">
             <p>
             Providing good service means taking time to listen. We will work with you every step of the way to make sure you receive the services you need. Our business is client-oriented, and we maintain strict confidentiality.
             <br /><br />
-            Our firm was established to provide efficient, expert solutions to women. Our primary services include, Massages and Permanent Make Up. We also offer a host of specialty services to cater to the unique needs of our clients. Our partners and staff serve a wide range of individuals.           
+            Our firm was established to provide efficient, expert solutions to women. Our primary services include, body and facial treatments. We also offer a host of specialty services to cater to the unique needs of our clients. Our partners and staff serve a wide range of individuals.           
             </p>
           </Col>
         </Row>

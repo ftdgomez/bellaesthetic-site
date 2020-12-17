@@ -6,7 +6,7 @@ videourl: L9SgW7Bvj3Y
 bg: body
 ---
 
-EL TRATAMIENTO NO INVASIVO DEL LÁSER LIPO SE CONSIDERA UNO DE LOS MÉTODOS MÁS INNOVADORES PARA TRATAR LAS ZONAS DE GRASA REBELDES QUE NO RESPONDEN A LA DIETA Y EL EJERCICIO.
+El tratamiento no invasivo del láser lipo se considera uno de los métodos más innovadores para tratar las zonas de grasa rebeldes que no responden a la dieta y el ejercicio.
 
 - Las ventajas
 - No invasivo
