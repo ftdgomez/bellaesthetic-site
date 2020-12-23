@@ -6,10 +6,12 @@ videourl: L9SgW7Bvj3Y
 bg: body
 ---
 
-# LIPO LASER
+# Lipo Laser
+
 The lipo laser’s non-invasive treatment is considered one of the most innovative methods to treat stubborn areas of fat that do not respond to diet and exercise.
 
 ## The Advantages
+
 - Non-invasive.
 - No injections.
 - Pinpoints target treatment areas.

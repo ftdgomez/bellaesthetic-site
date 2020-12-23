@@ -38,10 +38,6 @@ const AboutUs = () => {
             </p>
           </Col>
         </Row>
-        <p className="my-4">
-          There is currently no vaccine to prevent the Coronavirus (COVID-19). The best way to prevent illness is to avoid being exposed to this virus. We encourage you to continue washing your hands with soap and water often, avoiding close contact with others, and cleaning and disinfecting frequently touched objects and surfaces.
-        </p>
-
       </Container>
     </MainLayout>
   )

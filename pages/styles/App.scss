@@ -2,35 +2,43 @@
 
 /* make the customizations */
 $theme-colors: (
-    "primary": #CB957D,
-    "secondary": #C19551
+  'primary': #cb957d,
+  'secondary': #c19551,
 );
 
-$primary-color: #CB957D;
-$secondary-color: #C19551;
-
-
+$primary-color: #cb957d;
+$secondary-color: #c19551;
 
 /* import bootstrap to set changes */
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Roboto:wght@300&display=swap');
 
 $top-distance: 54px;
 
-html{
+html {
   overflow-x: hidden;
 }
 
-h1,h2,h4,h5,h6,h3,.title{
+h1,
+h2,
+h4,
+h5,
+h6,
+h3,
+.title {
   font-family: 'Montserrat', sans-serif;
 }
 
-body,p,button,a,li{
+body,
+p,
+button,
+a,
+li {
   font-family: 'Roboto', sans-serif;
 }
 
-#mainbg{
+#mainbg {
   mix-blend-mode: multiply;
   position: absolute;
   top: $top-distance;
@@ -42,18 +50,17 @@ body,p,button,a,li{
   z-index: 0;
 }
 
-.main-hero{
+.main-hero {
   position: absolute;
   top: $top-distance;
   left: 0;
   width: 100%;
-  @media (max-width: 600px)
-  {
+  @media (max-width: 600px) {
     background-color: rgba(255, 255, 255, 0.6);
   }
 }
 
-.custom-header-container{
+.custom-header-container {
   position: absolute;
   z-index: 9999;
   top: 0;
@@ -64,105 +71,99 @@ body,p,button,a,li{
   align-items: center;
   justify-content: space-between;
   padding: 0 2em;
-  img{
+  img {
     max-height: 75px;
     display: block;
   }
-  .btn-menu{
+  .btn-menu {
     color: white;
     background: $primary-color;
     padding: 1em;
     border-radius: 100%;
     border: 1px solid rgb(175, 170, 170);
-    transform: scale(.9);
-    transition: .4s ease;
+    transform: scale(0.9);
+    transition: 0.4s ease;
     display: none;
-    &:active{
+    &:active {
       transform: scale(1);
     }
   }
-  @media (max-width: 1024px)
-  {
+  @media (max-width: 1024px) {
     position: relative;
     padding: 1em;
-    background-color: rgba($color: $primary-color, $alpha: .5);
+    background-color: rgba($color: $primary-color, $alpha: 0.5);
     margin-top: 0;
     align-items: center;
-    .btn-menu{
+    .btn-menu {
       display: block;
     }
   }
 }
 
 .carousel-control-prev,
-.carousel-control-next{
+.carousel-control-next {
   max-width: 38px;
   background-color: $primary-color;
 }
 
-.row .d-flex .carousel.slide{
+.row .d-flex .carousel.slide {
   margin-top: auto !important;
   margin-left: auto !important;
   max-width: 580px;
 }
 
-.title-container{
+.title-container {
   max-width: 620px;
   margin-top: 22.5%;
-  h2{
+  h2 {
     font-size: 48px;
   }
-  @media (min-width: 1400px)
-  {
+  @media (min-width: 1400px) {
     max-width: 780px;
-    h2{
+    h2 {
       font-size: 86px;
     }
     margin: auto;
     margin-top: 25%;
   }
-  @media (min-with: 1024px)
-  {
+  @media (min-with: 1024px) {
     margin-top: 15%;
   }
-  @media (max-width: 1024px)
-  {
+  @media (max-width: 1024px) {
     text-align: center;
     padding-top: 34%;
   }
 }
 
-.carousel-indicators li{
+.carousel-indicators li {
   background-color: $primary-color;
 }
 
-
-.card-carousel-item{
+.card-carousel-item {
   padding: 1.25em 66px;
 }
 
-.custom-header{
+.custom-header {
   flex: 1;
   max-width: 780px;
   margin-left: auto;
   background-color: $primary-color;
-  padding: .25em 2em;
+  padding: 0.25em 2em;
   display: flex;
   align-items: center;
   justify-content: space-between;
   justify-self: center;
   box-shadow: 4px 2px 8px rgba($color: black, $alpha: 0.1);
-  .ig-logo{
+  .ig-logo {
     height: 34px;
     width: 34px;
-    margin: .25em;
+    margin: 0.25em;
   }
-  a{
+  a {
     color: white;
   }
 
-  @media (max-width: 1024px)
-  {
+  @media (max-width: 1024px) {
     position: fixed;
     top: 0;
     left: -100%;
@@ -171,98 +172,99 @@ body,p,button,a,li{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    transition: .4s ease;
+    transition: 0.4s ease;
   }
 }
 
-.sidebarActive{
+.sidebarActive {
   left: 0 !important;
 }
 
-.mp-img{
+.mp-img {
   min-height: 320px;
   width: 100%;
   background-size: 100%;
   background-position: center;
   display: flex;
-  transition: .4s ease;
+  transition: 0.4s ease;
   align-items: flex-end;
-  @media (max-height: 1024px)
-  {
+  @media (max-height: 1024px) {
     margin-bottom: 2em;
   }
-  &:hover{
+  &:hover {
     background-size: 105%;
     cursor: pointer;
   }
-  .mp-item{
+  .mp-item {
     background-color: $primary-color;
     color: white;
     font-size: 140%;
     width: 80%;
-    padding: .25em 1em;
+    padding: 0.25em 1em;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 1em;
   }
 }
-.mp-container{
+.mp-container {
   min-height: 800px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-h1,h2,h3,h4,h5{
-  color: #48300A;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #48300a;
 }
 
-.promocard{
+.promocard {
   margin-top: 5%;
   background-color: white;
   padding: 6em 2em;
   background-position: center right;
   background-size: 60%;
   background-repeat: no-repeat;
-  border: 2px solid #DBA147;
-  @media screen and (max-width: 1024px)
-  {
+  border: 2px solid #dba147;
+  @media screen and (max-width: 1024px) {
     background-position: center center;
     background-size: cover;
   }
-  *{
-    color: #DBA147;
+  * {
+    color: #dba147;
   }
-  h2{
+  h2 {
     font-weight: bold;
     max-width: 566px;
     font-size: 360%;
     background-color: white;
   }
-  a{
-    background-color: #DBA147;
+  a {
+    background-color: #dba147;
     color: white;
     padding: 1em 2em;
     display: inline-block;
   }
 }
 
-.container{
- @media (min-width: 1200px) {
-   max-width: 1280px;
- }
+.container {
+  @media (min-width: 1200px) {
+    max-width: 1280px;
+  }
 }
 
-.main-content{
+.main-content {
   position: relative;
   z-index: 3;
   background-color: white;
   padding: 1em 0;
 }
 
-@media screen and (max-width: 1024px)
-{
-  .carousel-indicators{
+@media screen and (max-width: 1024px) {
+  .carousel-indicators {
     display: none !important;
   }
 }
@@ -277,7 +279,7 @@ h1,h2,h3,h4,h5{
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
 }
@@ -292,16 +294,16 @@ h1,h2,h3,h4,h5{
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
-  a{
+  a {
     color: $primary-color;
     display: block;
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 }
-.dropdown-title{
+.dropdown-title {
   color: white;
   cursor: pointer;
 }
@@ -310,7 +312,7 @@ h1,h2,h3,h4,h5{
   display: block;
 }
 
-.np-bg{
+.np-bg {
   margin-top: 4em;
   min-height: 542px;
   background-size: 'cover';
@@ -319,25 +321,25 @@ h1,h2,h3,h4,h5{
   background-position: center;
   display: flex;
   align-items: center;
-  .np-dark-bg{
-    h3{
+  .np-dark-bg {
+    h3 {
       font-size: 242%;
-      margin-bottom: .42em;
+      margin-bottom: 0.42em;
     }
     margin: 0 1.5em;
     padding: 2em 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.4);
-    *{
+    background-color: rgba(0, 0, 0, 0.4);
+    * {
       color: white;
     }
-    img{
+    img {
       display: block;
       margin: auto;
     }
   }
-  .np-btn{
+  .np-btn {
     background-color: $secondary-color;
     color: white;
     text-align: center;
@@ -347,44 +349,47 @@ h1,h2,h3,h4,h5{
   }
 }
 
-.s-title-container{
+.s-title-container {
   min-height: 450px;
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
   align-items: center;
   justify-content: center;
-  h1{
+  h1 {
     font-size: 300%;
   }
 }
 
-.body-t-item{
+.body-t-item {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   min-height: 340px;
   margin-bottom: 1em;
-  h4{
+  h4 {
     background-color: $primary-color;
-    padding: .4em;
+    padding: 0.4em;
     text-transform: uppercase;
     font-size: 1.2em;
   }
 }
 
-.md-container{
+.md-container {
   padding: 1em 2em;
-  h1{
+  h1 {
     border-bottom: 1px solid #e1e1e1;
   }
-  h2,h3,h4,h5{
+  h2,
+  h3,
+  h4,
+  h5 {
     border-bottom: 1px solid #e1e1e1;
   }
 }
 
-.paquetes-title{
+.paquetes-title {
   background-color: $primary-color;
   color: white;
   padding: 1em 2em;

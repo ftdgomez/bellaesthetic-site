@@ -1,12 +1,13 @@
 ---
-title: HYDRAFACIAL
+title: HydraFacial
 url: hydrafacial
 picture: Hydrafacial-DF.jpg
 bg: facial
 videourl: IQYNFrmrRsU
 ---
 
-# HYDRAFACIAL
+# HydraFacial
+
 Only HydraFacial uses patented technology to cleanse, extract, and hydrate. HydraFacial super serums are made with nourishing ingredients that create an instantly gratifying glow in just 3 steps:
 
 - Cleanse + Peel: Uncover a new layer of skin with gentle exfoliation and relaxing resurfacing.
