@@ -47,7 +47,7 @@ export default function Home() {
           <HeroSection data={data} />
           <div className="main-content">
             <Container className="mp-container" style={{backgroundImage: 'url(/img/bg-cool-1.png)'}}>
-              <ServicesSection data={data} />
+              {/* <ServicesSection data={data} /> */}
               <Carousel className="mb-4 pb-4">
               {
                 services 
@@ -75,13 +75,13 @@ export default function Home() {
               }
               </Carousel>
               <MakeAppBrnContainer>
-                <Image src="/descuento.jpeg" alt="descuento primera visita" width="1250px" height="503px" />
+                <Image src={`/${data.descuentos[0]}`} alt="descuento primera visita" width="1250px" height="503px" />
               </MakeAppBrnContainer>
             </Container>
             <NuestroPaquetes data={data} />
             <Container className="mt-4">
               <MakeAppBrnContainer>
-                  <Image src="/2x3.jpeg" alt="promoción 2 x 3" width="1250px" height="503px" />
+                  <Image src={`/${data.descuentos[1]}`} alt="promoción 2 x 3" width="1250px" height="503px" />
               </MakeAppBrnContainer>
               </Container>
           </div>

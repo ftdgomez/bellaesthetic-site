@@ -14,19 +14,19 @@ const Footer = () => {
           <Col sm={12} md={4}>
             <ListGroup className="p-4">
               <ListGroup.Item>
-                <i className="mr-4 im im-calendar"></i> Monday and Wednesday<br />
+                <i className="mr-4 im im-calendar"></i> Monday, Tuesday and Friday<br />
                 <i className="mr-4 im im-clock"></i> 8:00am - 2:00pm<br />
               </ListGroup.Item>
               <ListGroup.Item>
-                <i className="mr-4 im im-calendar"></i> Tuesday-Thursday-Friday<br />
-                <i className="mr-4 im im-clock"></i> 8:00am - 8:00pm<br />
+                <i className="mr-4 im im-calendar"></i>Wednesdey<br />
+                <i className="mr-4 im im-clock"></i> 8:00am - 2:00pm<br />
               </ListGroup.Item>
               <ListGroup.Item>
                 <i className="mr-4 im im-calendar"></i>Saturday<br />
-                <i className="mr-4 im im-clock"></i> 7:00am - 5:00pm<br />
+                <i className="mr-4 im im-clock"></i> 7:00am - 2:00pm<br />
               </ListGroup.Item>
               <ListGroup.Item>
-                <i className="mr-4 im im-calendar"></i> Sunday<br />
+                <i className="mr-4 im im-calendar"></i>Sunday<br />
                 <i className="mr-4 im im-clock"></i> Closed<br />
               </ListGroup.Item>
             </ListGroup>

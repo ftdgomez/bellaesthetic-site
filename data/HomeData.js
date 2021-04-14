@@ -56,17 +56,20 @@ const HOME_EN = () =>{
       title: 'Our Packages',
       picture1: '/default_combos.jpg',
       picture2: '/default_combos.jpg',
+      ses: 'Sessions',
       text: 'Save money getting better results.',
       btn: {
         link: '/',
         text: 'Book Now'
-      }
-    }
+      },
+    },
+    descuentos: ['descuento-en-2.jpg', 'descuento-en-1.jpg']
   }
 }
 
 const HOME_ES = () =>{
   return {
+    descuentos: ['descuento-es-2.jpg', 'descuento-es-1.jpg'],
     heroSection: {
       mainTitle: "La Sensación de La Belleza",
       btn1: {
@@ -109,6 +112,7 @@ const HOME_ES = () =>{
       picture1: '/default_combos.jpg',
       picture2: '/default_combos.jpg',
       text: '¡Ahorra dinero y obtén mejores resultados!',
+      ses: 'Sesiones',
       btn: {
         link: '/',
         text: 'Agendar cita'
