@@ -19,7 +19,7 @@ The only medium depth medical grade chemical peel with the antioxidant Glutathio
 
 ## Solve common skin concerns
 
-sun spots? acne scars? dull or aging complexion? the perfect derma peel delivers real results for all skin types and ethnicities.
+Sun spots? acne scars? dull or aging complexion? the perfect derma peel delivers real results for all skin types and ethnicities.
 results in 1 week! a doctor can customize a treatment for every individual.
 
 powerful ingredients include tca, kojic acid, retinoic acid, salicylic acid, phenol, vitamin c and anti oxidant glutathione.

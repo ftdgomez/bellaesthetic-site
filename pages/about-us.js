@@ -29,7 +29,7 @@ const AboutUs = () => {
         </Row>
         <Row className="my-4">
           <Col className="d-flex algin-items-center justify-content-center">
-            <img style={{maxWidth: '420px', height: 'auto'}} src="/about-us-2.png" />
+            <img style={{maxWidth: '420px', height: '420px'}} src="/about-us-2.png" />
           </Col>
           <Col className="border my-4 d-flex aling-items-center justify-content-center flex-column p-md-4">
             <p>
