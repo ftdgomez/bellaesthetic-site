@@ -35,8 +35,8 @@ const SERVICE_ES = () =>{
     subtitle: 'En Bella Esthetics',
     description: [
       '¡Sabemos lo que hacemos bien y nos centramos en ello!',
-      'Wellness has been all of our lives passions and our lives work.',
-      'We specialize in Weight Loss, Wellness, Acne Treatments, Anti-Aging Treatments, Laser Hair Removal, Varicose Veins Removal, Relaxation Massage and more.'
+      'El bienestar ha sido la pasión de toda nuestra vida y el trabajo de toda nuestra vida.',
+      'Nos especializamos en pérdida de peso, bienestar, tratamientos para el acné, tratamientos antienvejecimiento, depilación láser, eliminación de várices, masajes de relajación y más.'
     ],
     bodyTtitle: 'Tratamientos Corporales',
     faceTtitle: 'Tratamientos Faciales'

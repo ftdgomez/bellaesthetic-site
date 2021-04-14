@@ -1,7 +1,7 @@
 ---
 title: PEELING
 url: peeling-es
-picture: IMG_0610.JPG
+picture: dermapeel.jpg
 bg: facial
 videourl: lSM4To2jLIU
 ---
