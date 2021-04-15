@@ -1,7 +1,7 @@
 ---
-title: MASAJE REDUCTIVO
-url: masaje-reductivo
-picture: IMG_2348.JPG
+title: Drenaje Linfático
+url: drenaje-linfatico
+picture: dl2.jpg
 bg: body
 ---
 

@@ -1,11 +1,15 @@
 import React, {useState} from 'react'
 import Link from 'next/link'
 import MakeAppointmentBtn from './MakeAppointmentBtn'
+import { useRouter } from 'next/router';
 
 const Header = ({data}) => {
   const [sidebar, setSidebar] = useState(false)
+  const router = useRouter();
+
   return (
     <header className="custom-header-container">
+      
       <Link href="/"><a><img src="/img/logo.png" alt=""/></a></Link>  
       <nav className={`custom-header ${sidebar && 'sidebarActive'}`}>
 
@@ -14,7 +18,7 @@ const Header = ({data}) => {
         ))}
 
         <div className="dropdown">
-          <span className="dropdown-title">{data.query === '?lang=es' ? 'Español - ES' : 'English - EN'}</span>
+          <span className="dropdown-title">{router.query.lang === 'en' ? 'Español - ES' : 'English - EN'}</span>
           {!location.pathname.includes('services/') ? 
             <div className="dropdown-content">
               <a  href={'?lang=es'}>Español - ES</a>
