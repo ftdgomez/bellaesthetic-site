@@ -6,15 +6,10 @@ bg: facial
 videourl: IQYNFrmrRsU
 ---
 
-Sólo HydraFacial utiliza tecnología patentada para limpiar, extraer e hidratar. Los súper sueros HydraFacial están hechos con ingredientes nutritivos que crean un resplandor instantáneo y gratificante en sólo 3 pasos:
+HydraFacial utiliza tecnología patentada para limpiar, extraer e hidratar. Los súper sueros HydraFacial están hechos con ingredientes nutritivos que crean un resplandor instantáneo y gratificante en sólo 3 pasos:
 
-# LIMPIAR + EXFOLIAR
+- Limpiar + Exfoliar: Descubrir una nueva capa de piel con una suave exfoliación y un relajante resurrección.
 
-Descubrir una nueva capa de piel con una suave exfoliación y un relajante resurrección.
+- Extracto + Hidratación: Quitar los restos de los poros con una succión indolora. Nutre con hidratantes intensos que apagan la piel.
 
-# EXTRACTO + HIDRATACIÓN
-
-Quitar los restos de los poros con una succión indolora. Nutre con hidratantes intensos que apagan la piel.
-
-# FUSIONAR + PROTEGER
-Satura la superficie de la piel con antioxidantes y péptidos para maximizar su brillo.
+- FUSIONAR + Proteger: Satura la superficie de la piel con antioxidantes y péptidos para maximizar su brillo.

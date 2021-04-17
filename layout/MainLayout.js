@@ -50,8 +50,8 @@ const MainLayout = ({children, headData}) => {
           <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"></link>
           <script src="/resize.js"></script>
         </Head>
-        <div className="p-3 text-center" style={{position: 'relative', zIndex: 2}}>
-          <p className="p-0 m-0">
+        <div className="text-center" style={{position: 'relative', zIndex: 2}}>
+          <p className="p-3 m-0">
             Coronavirus (COVID-19): <a href="/covid19">Click here</a> to learn how we are protecting our patients, community, physicians and staff.
           </p>
         </div>
